@@ -1,0 +1,618 @@
+2025-08-25 (19:21:33) -->  PaksDatabase initialized
+2025-08-25 (19:36:00) -->  PaksDatabase initialized
+2025-08-25 (19:36:06) -->  PaksDatabase initialized
+2025-08-25 (19:36:06) -->  PaksDatabase initialized
+2025-08-25 (19:40:53) -->  PaksDatabase Db Connected
+2025-08-25 (19:40:53) -->  PaksDatabase SELECT * FROM people where tc_no=29198060634 and deleted_at is null executed
+2025-08-25 (19:40:53) -->  PaksDatabase SELECT * FROM people where tc_no=29198060634 and deleted_at is null executed
+2025-08-25 (19:40:53) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:40:53) -->  PaksDatabase Db Connected
+2025-08-25 (19:40:53) -->  PaksDatabase SELECT * FROM finger_prints where person_id= 2 and info is not null executed
+2025-08-25 (19:40:53) -->  PaksDatabase SELECT * FROM finger_prints where person_id= 2 and info is not null executed
+2025-08-25 (19:40:53) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:40:54) -->  PaksDatabase Db Connected
+2025-08-25 (19:40:54) -->  PaksDatabase SELECT * FROM people where tc_no=29198060634 and deleted_at is null executed
+2025-08-25 (19:40:54) -->  PaksDatabase SELECT * FROM people where tc_no=29198060634 and deleted_at is null executed
+2025-08-25 (19:40:54) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:40:54) -->  PaksDatabase Db Connected
+2025-08-25 (19:40:54) -->  PaksDatabase SELECT * FROM finger_prints where person_id= 2 and info is not null executed
+2025-08-25 (19:40:54) -->  PaksDatabase SELECT * FROM finger_prints where person_id= 2 and info is not null executed
+2025-08-25 (19:40:54) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:40:55) -->  PaksDatabase Db Connected
+2025-08-25 (19:40:55) -->  PaksDatabase SELECT * FROM people where tc_no=29198060634 and deleted_at is null executed
+2025-08-25 (19:40:55) -->  PaksDatabase SELECT * FROM people where tc_no=29198060634 and deleted_at is null executed
+2025-08-25 (19:40:55) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:40:55) -->  PaksDatabase Db Connected
+2025-08-25 (19:40:55) -->  PaksDatabase SELECT * FROM finger_prints where person_id= 2 and info is not null executed
+2025-08-25 (19:40:55) -->  PaksDatabase SELECT * FROM finger_prints where person_id= 2 and info is not null executed
+2025-08-25 (19:40:55) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:41:15) -->  Fingerprint Scan Error
+2025-08-25 (19:41:36) -->  Fingerprint Scan Error
+2025-08-25 (19:41:46) -->  PaksDatabase Db Connected
+2025-08-25 (19:41:46) -->  PaksDatabase SELECT * FROM crimes where person_id=2 and status=1 and deleted_at is null executed
+2025-08-25 (19:41:46) -->  PaksDatabase SELECT * FROM crimes where person_id=2 and status=1 and deleted_at is null executed
+2025-08-25 (19:41:46) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:42:09) -->  Fingerprint Scan Error
+2025-08-25 (19:42:30) -->  Fingerprint Scan Error
+2025-08-25 (19:42:38) -->  PaksDatabase Db Connected
+2025-08-25 (19:42:38) -->  PaksDatabase SELECT * FROM people where tc_no=29198060634 and deleted_at is null executed
+2025-08-25 (19:42:38) -->  PaksDatabase SELECT * FROM people where tc_no=29198060634 and deleted_at is null executed
+2025-08-25 (19:42:38) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:42:38) -->  PaksDatabase Db Connected
+2025-08-25 (19:42:38) -->  PaksDatabase SELECT * FROM finger_prints where person_id= 2 and info is not null executed
+2025-08-25 (19:42:38) -->  PaksDatabase SELECT * FROM finger_prints where person_id= 2 and info is not null executed
+2025-08-25 (19:42:38) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:42:51) -->  Fingerprint Scan Error
+2025-08-25 (19:42:51) -->  PaksDatabase Db Connected
+2025-08-25 (19:42:51) -->  PaksDatabase SELECT * FROM crimes where person_id=2 and status=1 and deleted_at is null executed
+2025-08-25 (19:42:51) -->  PaksDatabase SELECT * FROM crimes where person_id=2 and status=1 and deleted_at is null executed
+2025-08-25 (19:42:51) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:43:46) -->  PaksDatabase initialized
+2025-08-25 (19:43:47) -->  PaksDatabase initialized
+2025-08-25 (19:44:10) -->  PaksDatabase Db Connected
+2025-08-25 (19:44:10) -->  PaksDatabase SELECT * FROM people where tc_no=29198060634 and deleted_at is null executed
+2025-08-25 (19:44:10) -->  PaksDatabase SELECT * FROM people where tc_no=29198060634 and deleted_at is null executed
+2025-08-25 (19:44:10) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:44:10) -->  PaksDatabase Db Connected
+2025-08-25 (19:44:10) -->  PaksDatabase SELECT * FROM finger_prints where person_id= 2 and info is not null executed
+2025-08-25 (19:44:10) -->  PaksDatabase SELECT * FROM finger_prints where person_id= 2 and info is not null executed
+2025-08-25 (19:44:10) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:44:30) -->  PaksDatabase Db Connected
+2025-08-25 (19:44:30) -->  PaksDatabase SELECT * FROM crimes where person_id=2 and status=1 and deleted_at is null executed
+2025-08-25 (19:44:30) -->  PaksDatabase SELECT * FROM crimes where person_id=2 and status=1 and deleted_at is null executed
+2025-08-25 (19:44:30) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:44:55) -->  PaksDatabase Db Connected
+2025-08-25 (19:44:55) -->  PaksDatabase SELECT * FROM people where tc_no=29198060634 and deleted_at is null executed
+2025-08-25 (19:44:55) -->  PaksDatabase SELECT * FROM people where tc_no=29198060634 and deleted_at is null executed
+2025-08-25 (19:44:55) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:44:55) -->  PaksDatabase Db Connected
+2025-08-25 (19:44:55) -->  PaksDatabase SELECT * FROM finger_prints where person_id= 2 and info is not null executed
+2025-08-25 (19:44:55) -->  PaksDatabase SELECT * FROM finger_prints where person_id= 2 and info is not null executed
+2025-08-25 (19:44:55) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:45:08) -->  PaksDatabase Db Connected
+2025-08-25 (19:45:08) -->  PaksDatabase SELECT * FROM crimes where person_id=2 and status=1 and deleted_at is null executed
+2025-08-25 (19:45:08) -->  PaksDatabase SELECT * FROM crimes where person_id=2 and status=1 and deleted_at is null executed
+2025-08-25 (19:45:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:45:19) -->  PaksDatabase Db Connected
+2025-08-25 (19:45:19) -->  PaksDatabase SELECT person_id FROM black_lists WHERE person_id='2' and deleted_at is null executed
+2025-08-25 (19:45:19) -->  PaksDatabase SELECT person_id FROM black_lists WHERE person_id='2' and deleted_at is null executed
+2025-08-25 (19:45:19) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:45:19) -->  PaksDatabase Db Connected
+2025-08-25 (19:45:19) -->  PaksDatabase SELECT * FROM crimes where person_id=2 and status=1 and deleted_at is null executed
+2025-08-25 (19:45:19) -->  PaksDatabase SELECT * FROM crimes where person_id=2 and status=1 and deleted_at is null executed
+2025-08-25 (19:45:19) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:45:19) -->  PaksDatabase Db Connected
+2025-08-25 (19:45:19) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =12 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:45:19) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =12 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:45:19) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:45:19) -->  PaksDatabase Db Connected
+2025-08-25 (19:45:19) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =13 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:45:19) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =13 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:45:19) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:45:19) -->  PaksDatabase Db Connected
+2025-08-25 (19:45:19) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =18 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:45:19) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =18 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:45:19) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:45:22) -->  Fotoðraf çekme baþarýlý
+2025-08-25 (19:45:22) -->  PaksDatabase Db Connected
+2025-08-25 (19:45:22) -->  PaksDatabase UPDATE crime_check_times SET print_status = '1', image_path ='/Photos/29198060634/2025/8/25/20250825194519.jpg', print_time = NOW() where crime_id = '18' and print_status is NULL  and start_time<=NOW() and end_time>=NOW() and id=212 executed
+2025-08-25 (19:45:22) -->  PaksDatabase UPDATE crime_check_times SET print_status = '1', image_path ='/Photos/29198060634/2025/8/25/20250825194519.jpg', print_time = NOW() where crime_id = '18' and print_status is NULL  and start_time<=NOW() and end_time>=NOW() and id=212 executed
+2025-08-25 (19:45:22) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:45:45) -->  Fingerprint Scan Error
+2025-08-25 (19:45:45) -->  PaksDatabase Db Connected
+2025-08-25 (19:45:45) -->  PaksDatabase SELECT person_id FROM black_lists WHERE person_id='2' and deleted_at is null executed
+2025-08-25 (19:45:45) -->  PaksDatabase SELECT person_id FROM black_lists WHERE person_id='2' and deleted_at is null executed
+2025-08-25 (19:45:45) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:45:45) -->  PaksDatabase Db Connected
+2025-08-25 (19:45:45) -->  PaksDatabase SELECT * FROM crimes where person_id=2 and status=1 and deleted_at is null executed
+2025-08-25 (19:45:45) -->  PaksDatabase SELECT * FROM crimes where person_id=2 and status=1 and deleted_at is null executed
+2025-08-25 (19:45:45) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:45:45) -->  PaksDatabase Db Connected
+2025-08-25 (19:45:45) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =12 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:45:45) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =12 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:45:45) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:45:45) -->  PaksDatabase Db Connected
+2025-08-25 (19:45:45) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =13 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:45:45) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =13 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:45:45) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:45:45) -->  PaksDatabase Db Connected
+2025-08-25 (19:45:45) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =18 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:45:45) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =18 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:45:45) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:45:45) -->  PaksDatabase Db Connected
+2025-08-25 (19:45:45) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =12 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:45:45) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =12 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:45:45) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:45:45) -->  PaksDatabase Db Connected
+2025-08-25 (19:45:45) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =13 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:45:45) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =13 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:45:45) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:45:45) -->  PaksDatabase Db Connected
+2025-08-25 (19:45:45) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =18 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:45:45) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =18 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:45:45) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:45:53) -->  PaksDatabase Db Connected
+2025-08-25 (19:45:53) -->  PaksDatabase SELECT * FROM people where tc_no=11726865040 and deleted_at is null executed
+2025-08-25 (19:45:53) -->  PaksDatabase SELECT * FROM people where tc_no=11726865040 and deleted_at is null executed
+2025-08-25 (19:45:53) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:45:53) -->  PaksDatabase Db Connected
+2025-08-25 (19:45:53) -->  PaksDatabase SELECT * FROM finger_prints where person_id= 3 and info is not null executed
+2025-08-25 (19:45:53) -->  PaksDatabase SELECT * FROM finger_prints where person_id= 3 and info is not null executed
+2025-08-25 (19:45:53) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:04) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:04) -->  PaksDatabase SELECT person_id FROM black_lists WHERE person_id='3' and deleted_at is null executed
+2025-08-25 (19:46:04) -->  PaksDatabase SELECT person_id FROM black_lists WHERE person_id='3' and deleted_at is null executed
+2025-08-25 (19:46:04) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:04) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:04) -->  PaksDatabase SELECT * FROM crimes where person_id=3 and status=1 and deleted_at is null executed
+2025-08-25 (19:46:04) -->  PaksDatabase SELECT * FROM crimes where person_id=3 and status=1 and deleted_at is null executed
+2025-08-25 (19:46:04) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:04) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:04) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:04) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:04) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:04) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:04) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:04) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:04) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:04) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:04) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =16 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:04) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =16 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:04) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:04) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:04) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =17 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:04) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =17 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:04) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:07) -->  Fotoðraf çekme baþarýlý
+2025-08-25 (19:46:07) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:07) -->  PaksDatabase UPDATE crime_check_times SET print_status = '1', image_path ='/Photos/11726865040/2025/8/25/20250825194604.jpg', print_time = NOW() where crime_id = '17' and print_status is NULL  and start_time<=NOW() and end_time>=NOW() and id=205 executed
+2025-08-25 (19:46:07) -->  PaksDatabase UPDATE crime_check_times SET print_status = '1', image_path ='/Photos/11726865040/2025/8/25/20250825194604.jpg', print_time = NOW() where crime_id = '17' and print_status is NULL  and start_time<=NOW() and end_time>=NOW() and id=205 executed
+2025-08-25 (19:46:07) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:11) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:11) -->  PaksDatabase SELECT person_id FROM black_lists WHERE person_id='3' and deleted_at is null executed
+2025-08-25 (19:46:11) -->  PaksDatabase SELECT person_id FROM black_lists WHERE person_id='3' and deleted_at is null executed
+2025-08-25 (19:46:11) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:11) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:11) -->  PaksDatabase SELECT * FROM crimes where person_id=3 and status=1 and deleted_at is null executed
+2025-08-25 (19:46:11) -->  PaksDatabase SELECT * FROM crimes where person_id=3 and status=1 and deleted_at is null executed
+2025-08-25 (19:46:11) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:11) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:11) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:11) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:11) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:11) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:11) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:11) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:11) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:11) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:11) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =16 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:11) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =16 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:11) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:11) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:11) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =17 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:11) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =17 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:11) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:11) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:11) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:11) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:11) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:14) -->  Fotoðraf çekme baþarýlý
+2025-08-25 (19:46:14) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:14) -->  PaksDatabase UPDATE crime_check_times SET print_status = '3', image_path ='/Photos/11726865040/2025/8/25/20250825194611.jpg', print_time = NOW() where crime_id = '14' and print_status is NULL and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and id=112 executed
+2025-08-25 (19:46:14) -->  PaksDatabase UPDATE crime_check_times SET print_status = '3', image_path ='/Photos/11726865040/2025/8/25/20250825194611.jpg', print_time = NOW() where crime_id = '14' and print_status is NULL and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and id=112 executed
+2025-08-25 (19:46:14) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:17) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:17) -->  PaksDatabase SELECT person_id FROM black_lists WHERE person_id='3' and deleted_at is null executed
+2025-08-25 (19:46:17) -->  PaksDatabase SELECT person_id FROM black_lists WHERE person_id='3' and deleted_at is null executed
+2025-08-25 (19:46:17) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:17) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:17) -->  PaksDatabase SELECT * FROM crimes where person_id=3 and status=1 and deleted_at is null executed
+2025-08-25 (19:46:17) -->  PaksDatabase SELECT * FROM crimes where person_id=3 and status=1 and deleted_at is null executed
+2025-08-25 (19:46:17) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:17) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:17) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:17) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:17) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:17) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:17) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:17) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:17) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:17) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:17) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =16 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:17) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =16 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:17) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:17) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:17) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =17 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:17) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =17 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:17) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:17) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:17) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:17) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:17) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:18) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:18) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:18) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:18) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:20) -->  Fotoðraf çekme baþarýlý
+2025-08-25 (19:46:20) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:20) -->  PaksDatabase UPDATE crime_check_times SET print_status = '3', image_path ='/Photos/11726865040/2025/8/25/20250825194618.jpg', print_time = NOW() where crime_id = '15' and print_status is NULL and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and id=143 executed
+2025-08-25 (19:46:20) -->  PaksDatabase UPDATE crime_check_times SET print_status = '3', image_path ='/Photos/11726865040/2025/8/25/20250825194618.jpg', print_time = NOW() where crime_id = '15' and print_status is NULL and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and id=143 executed
+2025-08-25 (19:46:20) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:24) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:24) -->  PaksDatabase SELECT person_id FROM black_lists WHERE person_id='3' and deleted_at is null executed
+2025-08-25 (19:46:24) -->  PaksDatabase SELECT person_id FROM black_lists WHERE person_id='3' and deleted_at is null executed
+2025-08-25 (19:46:24) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:24) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:24) -->  PaksDatabase SELECT * FROM crimes where person_id=3 and status=1 and deleted_at is null executed
+2025-08-25 (19:46:24) -->  PaksDatabase SELECT * FROM crimes where person_id=3 and status=1 and deleted_at is null executed
+2025-08-25 (19:46:24) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:24) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:24) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:24) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:24) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:24) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:24) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:24) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:24) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:24) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:24) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =16 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:24) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =16 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:24) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:24) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:24) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =17 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:24) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =17 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:24) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:24) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:24) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:24) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:24) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:24) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:24) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:24) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:24) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:24) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:24) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =16 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:24) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =16 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:24) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:27) -->  Fotoðraf çekme baþarýlý
+2025-08-25 (19:46:27) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:27) -->  PaksDatabase UPDATE crime_check_times SET print_status = '3', image_path ='/Photos/11726865040/2025/8/25/20250825194624.jpg', print_time = NOW() where crime_id = '16' and print_status is NULL and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and id=174 executed
+2025-08-25 (19:46:27) -->  PaksDatabase UPDATE crime_check_times SET print_status = '3', image_path ='/Photos/11726865040/2025/8/25/20250825194624.jpg', print_time = NOW() where crime_id = '16' and print_status is NULL and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and id=174 executed
+2025-08-25 (19:46:27) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:30) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT person_id FROM black_lists WHERE person_id='3' and deleted_at is null executed
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT person_id FROM black_lists WHERE person_id='3' and deleted_at is null executed
+2025-08-25 (19:46:31) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:31) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT * FROM crimes where person_id=3 and status=1 and deleted_at is null executed
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT * FROM crimes where person_id=3 and status=1 and deleted_at is null executed
+2025-08-25 (19:46:31) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:31) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:31) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:31) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:31) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:31) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =16 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =16 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:31) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:31) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =17 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =17 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:46:31) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:31) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:31) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:31) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:31) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:31) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =16 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =16 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:31) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:31) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =17 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:31) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =17 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:46:31) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:46) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:46) -->  PaksDatabase SELECT * FROM people where tc_no=29198060634 and deleted_at is null executed
+2025-08-25 (19:46:46) -->  PaksDatabase SELECT * FROM people where tc_no=29198060634 and deleted_at is null executed
+2025-08-25 (19:46:46) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:46:46) -->  PaksDatabase Db Connected
+2025-08-25 (19:46:46) -->  PaksDatabase SELECT * FROM finger_prints where person_id= 2 and info is not null executed
+2025-08-25 (19:46:46) -->  PaksDatabase SELECT * FROM finger_prints where person_id= 2 and info is not null executed
+2025-08-25 (19:46:46) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:47:03) -->  PaksDatabase Db Connected
+2025-08-25 (19:47:03) -->  PaksDatabase SELECT person_id FROM black_lists WHERE person_id='2' and deleted_at is null executed
+2025-08-25 (19:47:03) -->  PaksDatabase SELECT person_id FROM black_lists WHERE person_id='2' and deleted_at is null executed
+2025-08-25 (19:47:03) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:47:03) -->  PaksDatabase Db Connected
+2025-08-25 (19:47:03) -->  PaksDatabase SELECT * FROM crimes where person_id=2 and status=1 and deleted_at is null executed
+2025-08-25 (19:47:03) -->  PaksDatabase SELECT * FROM crimes where person_id=2 and status=1 and deleted_at is null executed
+2025-08-25 (19:47:03) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:47:03) -->  PaksDatabase Db Connected
+2025-08-25 (19:47:03) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =12 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:47:03) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =12 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:47:03) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:47:03) -->  PaksDatabase Db Connected
+2025-08-25 (19:47:03) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =13 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:47:03) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =13 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:47:03) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:47:03) -->  PaksDatabase Db Connected
+2025-08-25 (19:47:03) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =18 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:47:03) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =18 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:47:03) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:47:03) -->  PaksDatabase Db Connected
+2025-08-25 (19:47:03) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =12 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:47:03) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =12 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:47:03) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:47:03) -->  PaksDatabase Db Connected
+2025-08-25 (19:47:03) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =13 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:47:03) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =13 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:47:03) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:47:03) -->  PaksDatabase Db Connected
+2025-08-25 (19:47:03) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =18 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:47:03) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =18 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:47:03) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:47:59) -->  PaksDatabase Db Connected
+2025-08-25 (19:47:59) -->  PaksDatabase SELECT * FROM people where tc_no=11726865040 and deleted_at is null executed
+2025-08-25 (19:47:59) -->  PaksDatabase SELECT * FROM people where tc_no=11726865040 and deleted_at is null executed
+2025-08-25 (19:47:59) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:47:59) -->  PaksDatabase Db Connected
+2025-08-25 (19:47:59) -->  PaksDatabase SELECT * FROM finger_prints where person_id= 3 and info is not null executed
+2025-08-25 (19:47:59) -->  PaksDatabase SELECT * FROM finger_prints where person_id= 3 and info is not null executed
+2025-08-25 (19:47:59) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connected
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT person_id FROM black_lists WHERE person_id='3' and deleted_at is null executed
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT person_id FROM black_lists WHERE person_id='3' and deleted_at is null executed
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connected
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT * FROM crimes where person_id=3 and status=1 and deleted_at is null executed
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT * FROM crimes where person_id=3 and status=1 and deleted_at is null executed
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connected
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connected
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connected
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =16 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =16 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connected
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =17 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =17 and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL executed
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connected
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =14 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connected
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =15 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connected
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =16 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =16 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connected
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =17 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:48:10) -->  PaksDatabase SELECT id FROM crime_check_times where print_status is NULL and crime_id =17 and (date(start_time)=CURRENT_DATE() or date(end_time)=CURRENT_DATE()) and deleted_at is NULL executed
+2025-08-25 (19:48:10) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (19:53:49) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (19:53:49) -->  Skipped fp_module control due to the lock
+2025-08-25 (20:03:53) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (20:03:53) -->  Skipped fp_module control due to the lock
+2025-08-25 (20:13:02) -->  PaksDatabase initialized
+2025-08-25 (20:13:05) -->  PaksDatabase initialized
+2025-08-25 (20:13:06) -->  PaksDatabase initialized
+2025-08-25 (20:23:08) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (20:23:08) -->  Skipped fp_module control due to the lock
+2025-08-25 (20:33:12) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (20:33:12) -->  Skipped fp_module control due to the lock
+2025-08-25 (20:43:15) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (20:43:15) -->  Skipped fp_module control due to the lock
+2025-08-25 (20:53:19) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (20:53:19) -->  Skipped fp_module control due to the lock
+2025-08-25 (21:03:22) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (21:03:22) -->  Skipped fp_module control due to the lock
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connected
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connected
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connected
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connected
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connected
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 18 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 18 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connected
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '3' and status = 1 executed
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '3' and status = 1 executed
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connected
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 14 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 14 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connected
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 15 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 15 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connected
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 16 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 16 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connected
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 17 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 17 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connected
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connected
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connected
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '3' and status = 0 executed
+2025-08-25 (21:13:07) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '3' and status = 0 executed
+2025-08-25 (21:13:07) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (21:13:25) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (21:13:25) -->  Skipped fp_module control due to the lock
+2025-08-25 (21:23:29) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (21:23:29) -->  Skipped fp_module control due to the lock
+2025-08-25 (21:33:32) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (21:33:32) -->  Skipped fp_module control due to the lock
+2025-08-25 (21:43:36) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (21:43:36) -->  Skipped fp_module control due to the lock
+2025-08-25 (21:53:39) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (21:53:39) -->  Skipped fp_module control due to the lock
+2025-08-25 (22:03:42) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (22:03:42) -->  Skipped fp_module control due to the lock
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 18 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 18 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '3' and status = 1 executed
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '3' and status = 1 executed
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 14 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 14 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 15 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 15 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 16 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 16 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 17 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 17 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '3' and status = 0 executed
+2025-08-25 (22:13:08) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '3' and status = 0 executed
+2025-08-25 (22:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (22:13:45) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (22:13:45) -->  Skipped fp_module control due to the lock
+2025-08-25 (22:23:49) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (22:23:49) -->  Skipped fp_module control due to the lock
+2025-08-25 (22:33:52) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (22:33:52) -->  Skipped fp_module control due to the lock
+2025-08-25 (22:43:55) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (22:43:55) -->  Skipped fp_module control due to the lock
+2025-08-25 (22:53:58) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (22:53:58) -->  Skipped fp_module control due to the lock
+2025-08-25 (23:04:02) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (23:04:02) -->  Skipped fp_module control due to the lock
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 18 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 18 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '3' and status = 1 executed
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '3' and status = 1 executed
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 14 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 14 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 15 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 15 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 16 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 16 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 17 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 17 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connected
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '3' and status = 0 executed
+2025-08-25 (23:13:08) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '3' and status = 0 executed
+2025-08-25 (23:13:08) -->  PaksDatabase Db Connection Closed..
+2025-08-25 (23:14:05) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (23:14:05) -->  Skipped fp_module control due to the lock
+2025-08-25 (23:24:08) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (23:24:08) -->  Skipped fp_module control due to the lock
+2025-08-25 (23:34:11) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (23:34:11) -->  Skipped fp_module control due to the lock
+2025-08-25 (23:44:15) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (23:44:15) -->  Skipped fp_module control due to the lock
+2025-08-25 (23:50:00) -->  MySQL yedeði alýndý: FTP\db\mysql_backup_20250825_235000.sql
+2025-08-25 (23:54:18) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-08-25 (23:54:18) -->  Skipped fp_module control due to the lock
+2025-08-25 (23:55:00) -->  photos yedekleme tamamlandý.

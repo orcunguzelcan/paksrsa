@@ -1,0 +1,1156 @@
+2025-06-28 (00:08:31) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (00:08:31) -->  Skipped fp_module control due to the lock
+2025-06-28 (00:10:53) -->  PaksDatabase Db Connected
+2025-06-28 (00:10:53) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (00:10:53) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (00:10:53) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (00:10:53) -->  PaksDatabase Db Connected
+2025-06-28 (00:10:53) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (00:10:53) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (00:10:53) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (00:10:53) -->  PaksDatabase Db Connected
+2025-06-28 (00:10:53) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (00:10:53) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (00:10:53) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (00:10:53) -->  PaksDatabase Db Connected
+2025-06-28 (00:10:53) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (00:10:53) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (00:10:53) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (00:10:53) -->  PaksDatabase Db Connected
+2025-06-28 (00:10:53) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (00:10:53) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (00:10:53) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (00:10:53) -->  PaksDatabase Db Connected
+2025-06-28 (00:10:53) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (00:10:53) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (00:10:53) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (00:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (00:10:54) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (00:10:54) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (00:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (00:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (00:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (00:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (00:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (00:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (00:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (00:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (00:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (00:18:34) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (00:18:34) -->  Skipped fp_module control due to the lock
+2025-06-28 (00:28:36) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (00:28:36) -->  Skipped fp_module control due to the lock
+2025-06-28 (00:38:38) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (00:38:38) -->  Skipped fp_module control due to the lock
+2025-06-28 (00:48:41) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (00:48:41) -->  Skipped fp_module control due to the lock
+2025-06-28 (00:58:43) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (00:58:43) -->  Skipped fp_module control due to the lock
+2025-06-28 (01:08:46) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (01:08:46) -->  Skipped fp_module control due to the lock
+2025-06-28 (01:10:53) -->  PaksDatabase Db Connected
+2025-06-28 (01:10:53) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (01:10:53) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (01:10:53) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (01:10:53) -->  PaksDatabase Db Connected
+2025-06-28 (01:10:53) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (01:10:53) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (01:10:53) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (01:10:53) -->  PaksDatabase Db Connected
+2025-06-28 (01:10:53) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (01:10:53) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (01:10:53) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (01:10:53) -->  PaksDatabase Db Connected
+2025-06-28 (01:10:53) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (01:10:53) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (01:10:53) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (01:10:53) -->  PaksDatabase Db Connected
+2025-06-28 (01:10:53) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (01:10:53) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (01:10:53) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (01:10:53) -->  PaksDatabase Db Connected
+2025-06-28 (01:10:53) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (01:10:53) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (01:10:53) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (01:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (01:10:54) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (01:10:54) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (01:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (01:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (01:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (01:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (01:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (01:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (01:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (01:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (01:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (01:18:48) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (01:18:48) -->  Skipped fp_module control due to the lock
+2025-06-28 (01:28:51) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (01:28:51) -->  Skipped fp_module control due to the lock
+2025-06-28 (01:38:53) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (01:38:53) -->  Skipped fp_module control due to the lock
+2025-06-28 (01:48:55) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (01:48:55) -->  Skipped fp_module control due to the lock
+2025-06-28 (01:58:58) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (01:58:58) -->  Skipped fp_module control due to the lock
+2025-06-28 (02:09:00) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (02:09:00) -->  Skipped fp_module control due to the lock
+2025-06-28 (02:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (02:10:54) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (02:10:54) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (02:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (02:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (02:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (02:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (02:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (02:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (02:10:54) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (02:10:54) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (02:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (02:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (02:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (02:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (02:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (02:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (02:10:54) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (02:10:54) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (02:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (02:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (02:10:54) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (02:10:54) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (02:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (02:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (02:10:55) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (02:10:55) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (02:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (02:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (02:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (02:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (02:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (02:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (02:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (02:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (02:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (02:19:03) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (02:19:03) -->  Skipped fp_module control due to the lock
+2025-06-28 (02:29:05) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (02:29:05) -->  Skipped fp_module control due to the lock
+2025-06-28 (02:39:08) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (02:39:08) -->  Skipped fp_module control due to the lock
+2025-06-28 (02:49:10) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (02:49:10) -->  Skipped fp_module control due to the lock
+2025-06-28 (02:59:12) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (02:59:12) -->  Skipped fp_module control due to the lock
+2025-06-28 (03:00:00) -->  Dosyalar gönderiliyor...
+2025-06-28 (03:00:01) -->  Dosyalar gönderildi...
+2025-06-28 (03:00:01) -->  Dosyalar silindi.
+2025-06-28 (03:09:15) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (03:09:15) -->  Skipped fp_module control due to the lock
+2025-06-28 (03:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (03:10:54) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (03:10:54) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (03:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (03:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (03:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (03:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (03:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (03:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (03:10:54) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (03:10:54) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (03:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (03:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (03:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (03:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (03:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (03:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (03:10:54) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (03:10:54) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (03:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (03:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (03:10:54) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (03:10:54) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (03:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (03:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (03:10:55) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (03:10:55) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (03:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (03:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (03:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (03:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (03:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (03:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (03:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (03:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (03:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (03:19:18) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (03:19:18) -->  Skipped fp_module control due to the lock
+2025-06-28 (03:29:20) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (03:29:20) -->  Skipped fp_module control due to the lock
+2025-06-28 (03:39:23) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (03:39:23) -->  Skipped fp_module control due to the lock
+2025-06-28 (03:49:25) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (03:49:25) -->  Skipped fp_module control due to the lock
+2025-06-28 (03:59:27) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (03:59:27) -->  Skipped fp_module control due to the lock
+2025-06-28 (04:00:00) -->  Servisler yeniden baþlatýldý.
+2025-06-28 (04:09:30) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (04:09:30) -->  Skipped fp_module control due to the lock
+2025-06-28 (04:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (04:10:54) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (04:10:54) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (04:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (04:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (04:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (04:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (04:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (04:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (04:10:54) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (04:10:54) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (04:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (04:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (04:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (04:10:54) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (04:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (04:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (04:10:54) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (04:10:54) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (04:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (04:10:54) -->  PaksDatabase Db Connected
+2025-06-28 (04:10:54) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (04:10:54) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (04:10:54) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (04:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (04:10:55) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (04:10:55) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (04:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (04:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (04:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (04:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (04:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (04:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (04:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (04:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (04:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (04:19:32) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (04:19:32) -->  Skipped fp_module control due to the lock
+2025-06-28 (04:29:35) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (04:29:35) -->  Skipped fp_module control due to the lock
+2025-06-28 (04:39:37) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (04:39:37) -->  Skipped fp_module control due to the lock
+2025-06-28 (04:49:40) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (04:49:40) -->  Skipped fp_module control due to the lock
+2025-06-28 (04:59:42) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (04:59:42) -->  Skipped fp_module control due to the lock
+2025-06-28 (05:09:44) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (05:09:44) -->  Skipped fp_module control due to the lock
+2025-06-28 (05:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (05:10:55) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (05:10:55) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (05:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (05:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (05:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (05:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (05:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (05:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (05:10:55) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (05:10:55) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (05:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (05:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (05:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (05:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (05:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (05:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (05:10:55) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (05:10:55) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (05:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (05:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (05:10:55) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (05:10:55) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (05:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (05:10:56) -->  PaksDatabase Db Connected
+2025-06-28 (05:10:56) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (05:10:56) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (05:10:56) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (05:10:56) -->  PaksDatabase Db Connected
+2025-06-28 (05:10:56) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (05:10:56) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (05:10:56) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (05:10:56) -->  PaksDatabase Db Connected
+2025-06-28 (05:10:56) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (05:10:56) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (05:10:56) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (05:19:47) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (05:19:47) -->  Skipped fp_module control due to the lock
+2025-06-28 (05:29:49) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (05:29:49) -->  Skipped fp_module control due to the lock
+2025-06-28 (05:39:52) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (05:39:52) -->  Skipped fp_module control due to the lock
+2025-06-28 (05:49:54) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (05:49:54) -->  Skipped fp_module control due to the lock
+2025-06-28 (05:59:56) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (05:59:56) -->  Skipped fp_module control due to the lock
+2025-06-28 (06:09:59) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (06:09:59) -->  Skipped fp_module control due to the lock
+2025-06-28 (06:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (06:10:55) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (06:10:55) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (06:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (06:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (06:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (06:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (06:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (06:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (06:10:55) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (06:10:55) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (06:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (06:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (06:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (06:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (06:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (06:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (06:10:55) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (06:10:55) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (06:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (06:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (06:10:55) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (06:10:55) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (06:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (06:10:56) -->  PaksDatabase Db Connected
+2025-06-28 (06:10:56) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (06:10:56) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (06:10:56) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (06:10:56) -->  PaksDatabase Db Connected
+2025-06-28 (06:10:56) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (06:10:56) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (06:10:56) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (06:10:56) -->  PaksDatabase Db Connected
+2025-06-28 (06:10:56) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (06:10:56) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (06:10:56) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (06:20:01) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (06:20:01) -->  Skipped fp_module control due to the lock
+2025-06-28 (06:30:04) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (06:30:04) -->  Skipped fp_module control due to the lock
+2025-06-28 (06:40:06) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (06:40:06) -->  Skipped fp_module control due to the lock
+2025-06-28 (06:50:08) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (06:50:08) -->  Skipped fp_module control due to the lock
+2025-06-28 (07:00:11) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (07:00:11) -->  Skipped fp_module control due to the lock
+2025-06-28 (07:10:13) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (07:10:13) -->  Skipped fp_module control due to the lock
+2025-06-28 (07:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (07:10:55) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (07:10:55) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (07:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (07:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (07:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (07:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (07:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (07:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (07:10:55) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (07:10:55) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (07:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (07:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (07:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (07:10:55) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (07:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (07:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (07:10:55) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (07:10:55) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (07:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (07:10:55) -->  PaksDatabase Db Connected
+2025-06-28 (07:10:55) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (07:10:55) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (07:10:55) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (07:10:56) -->  PaksDatabase Db Connected
+2025-06-28 (07:10:56) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (07:10:56) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (07:10:56) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (07:10:56) -->  PaksDatabase Db Connected
+2025-06-28 (07:10:56) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (07:10:56) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (07:10:56) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (07:10:56) -->  PaksDatabase Db Connected
+2025-06-28 (07:10:56) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (07:10:56) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (07:10:56) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (07:20:15) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (07:20:15) -->  Skipped fp_module control due to the lock
+2025-06-28 (07:30:18) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (07:30:18) -->  Skipped fp_module control due to the lock
+2025-06-28 (07:40:20) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (07:40:20) -->  Skipped fp_module control due to the lock
+2025-06-28 (07:50:22) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (07:50:22) -->  Skipped fp_module control due to the lock
+2025-06-28 (08:00:25) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (08:00:25) -->  Skipped fp_module control due to the lock
+2025-06-28 (08:10:27) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (08:10:27) -->  Skipped fp_module control due to the lock
+2025-06-28 (08:10:56) -->  PaksDatabase Db Connected
+2025-06-28 (08:10:56) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (08:10:56) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (08:10:56) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (08:10:56) -->  PaksDatabase Db Connected
+2025-06-28 (08:10:56) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (08:10:56) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (08:10:56) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (08:10:56) -->  PaksDatabase Db Connected
+2025-06-28 (08:10:56) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (08:10:56) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (08:10:56) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (08:10:56) -->  PaksDatabase Db Connected
+2025-06-28 (08:10:56) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (08:10:56) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (08:10:56) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (08:10:56) -->  PaksDatabase Db Connected
+2025-06-28 (08:10:56) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (08:10:56) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (08:10:56) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (08:10:56) -->  PaksDatabase Db Connected
+2025-06-28 (08:10:56) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (08:10:56) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (08:10:56) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (08:10:57) -->  PaksDatabase Db Connected
+2025-06-28 (08:10:57) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (08:10:57) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (08:10:57) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (08:10:57) -->  PaksDatabase Db Connected
+2025-06-28 (08:10:57) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (08:10:57) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (08:10:57) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (08:10:57) -->  PaksDatabase Db Connected
+2025-06-28 (08:10:57) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (08:10:57) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (08:10:57) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (08:20:29) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (08:20:29) -->  Skipped fp_module control due to the lock
+2025-06-28 (08:30:32) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (08:30:32) -->  Skipped fp_module control due to the lock
+2025-06-28 (08:40:34) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (08:40:34) -->  Skipped fp_module control due to the lock
+2025-06-28 (08:50:37) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (08:50:37) -->  Skipped fp_module control due to the lock
+2025-06-28 (09:00:39) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (09:00:39) -->  Skipped fp_module control due to the lock
+2025-06-28 (09:10:41) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (09:10:41) -->  Skipped fp_module control due to the lock
+2025-06-28 (09:10:57) -->  PaksDatabase Db Connected
+2025-06-28 (09:10:57) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (09:10:57) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (09:10:57) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (09:10:57) -->  PaksDatabase Db Connected
+2025-06-28 (09:10:57) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (09:10:57) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (09:10:57) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (09:10:57) -->  PaksDatabase Db Connected
+2025-06-28 (09:10:57) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (09:10:57) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (09:10:57) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (09:10:57) -->  PaksDatabase Db Connected
+2025-06-28 (09:10:57) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (09:10:57) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (09:10:57) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (09:10:57) -->  PaksDatabase Db Connected
+2025-06-28 (09:10:57) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (09:10:57) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (09:10:57) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (09:10:57) -->  PaksDatabase Db Connected
+2025-06-28 (09:10:57) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (09:10:57) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (09:10:57) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (09:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (09:10:58) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (09:10:58) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (09:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (09:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (09:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (09:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (09:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (09:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (09:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (09:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (09:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (09:20:44) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (09:20:44) -->  Skipped fp_module control due to the lock
+2025-06-28 (09:30:46) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (09:30:46) -->  Skipped fp_module control due to the lock
+2025-06-28 (09:40:49) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (09:40:49) -->  Skipped fp_module control due to the lock
+2025-06-28 (09:50:51) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (09:50:51) -->  Skipped fp_module control due to the lock
+2025-06-28 (10:00:53) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (10:00:53) -->  Skipped fp_module control due to the lock
+2025-06-28 (10:10:56) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (10:10:56) -->  Skipped fp_module control due to the lock
+2025-06-28 (10:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (10:10:58) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (10:10:58) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (10:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (10:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (10:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (10:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (10:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (10:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (10:10:58) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (10:10:58) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (10:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (10:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (10:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (10:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (10:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (10:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (10:10:58) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (10:10:58) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (10:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (10:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (10:10:58) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (10:10:58) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (10:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (10:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (10:10:58) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (10:10:58) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (10:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (10:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (10:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (10:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (10:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (10:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (10:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (10:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (10:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (10:20:58) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (10:20:58) -->  Skipped fp_module control due to the lock
+2025-06-28 (10:31:00) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (10:31:00) -->  Skipped fp_module control due to the lock
+2025-06-28 (10:41:03) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (10:41:03) -->  Skipped fp_module control due to the lock
+2025-06-28 (10:51:05) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (10:51:05) -->  Skipped fp_module control due to the lock
+2025-06-28 (11:01:08) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (11:01:08) -->  Skipped fp_module control due to the lock
+2025-06-28 (11:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (11:10:58) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (11:10:58) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (11:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (11:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (11:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (11:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (11:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (11:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (11:10:58) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (11:10:58) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (11:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (11:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (11:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (11:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (11:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (11:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (11:10:58) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (11:10:58) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (11:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (11:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (11:10:58) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (11:10:58) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (11:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (11:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (11:10:58) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (11:10:58) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (11:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (11:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (11:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (11:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (11:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (11:10:58) -->  PaksDatabase Db Connected
+2025-06-28 (11:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (11:10:58) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (11:10:58) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (11:11:10) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (11:11:10) -->  Skipped fp_module control due to the lock
+2025-06-28 (11:21:13) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (11:21:13) -->  Skipped fp_module control due to the lock
+2025-06-28 (11:31:15) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (11:31:15) -->  Skipped fp_module control due to the lock
+2025-06-28 (11:41:17) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (11:41:17) -->  Skipped fp_module control due to the lock
+2025-06-28 (11:51:20) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (11:51:20) -->  Skipped fp_module control due to the lock
+2025-06-28 (12:01:22) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (12:01:22) -->  Skipped fp_module control due to the lock
+2025-06-28 (12:10:59) -->  PaksDatabase Db Connected
+2025-06-28 (12:10:59) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (12:10:59) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (12:10:59) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (12:10:59) -->  PaksDatabase Db Connected
+2025-06-28 (12:10:59) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (12:10:59) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (12:10:59) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (12:10:59) -->  PaksDatabase Db Connected
+2025-06-28 (12:10:59) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (12:10:59) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (12:10:59) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (12:10:59) -->  PaksDatabase Db Connected
+2025-06-28 (12:10:59) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (12:10:59) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (12:10:59) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (12:10:59) -->  PaksDatabase Db Connected
+2025-06-28 (12:10:59) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (12:10:59) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (12:10:59) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (12:10:59) -->  PaksDatabase Db Connected
+2025-06-28 (12:10:59) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (12:10:59) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (12:10:59) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (12:10:59) -->  PaksDatabase Db Connected
+2025-06-28 (12:10:59) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (12:10:59) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (12:10:59) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (12:10:59) -->  PaksDatabase Db Connected
+2025-06-28 (12:10:59) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (12:10:59) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (12:10:59) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (12:10:59) -->  PaksDatabase Db Connected
+2025-06-28 (12:10:59) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (12:10:59) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (12:10:59) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (12:11:25) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (12:11:25) -->  Skipped fp_module control due to the lock
+2025-06-28 (12:21:27) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (12:21:27) -->  Skipped fp_module control due to the lock
+2025-06-28 (12:31:30) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (12:31:30) -->  Skipped fp_module control due to the lock
+2025-06-28 (12:41:32) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (12:41:32) -->  Skipped fp_module control due to the lock
+2025-06-28 (12:51:34) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (12:51:34) -->  Skipped fp_module control due to the lock
+2025-06-28 (13:01:37) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (13:01:37) -->  Skipped fp_module control due to the lock
+2025-06-28 (13:11:00) -->  PaksDatabase Db Connected
+2025-06-28 (13:11:00) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (13:11:00) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (13:11:00) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (13:11:00) -->  PaksDatabase Db Connected
+2025-06-28 (13:11:00) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (13:11:00) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (13:11:00) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (13:11:00) -->  PaksDatabase Db Connected
+2025-06-28 (13:11:00) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (13:11:00) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (13:11:00) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (13:11:00) -->  PaksDatabase Db Connected
+2025-06-28 (13:11:00) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (13:11:00) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (13:11:00) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (13:11:00) -->  PaksDatabase Db Connected
+2025-06-28 (13:11:00) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (13:11:00) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (13:11:00) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (13:11:00) -->  PaksDatabase Db Connected
+2025-06-28 (13:11:00) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (13:11:00) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (13:11:00) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (13:11:00) -->  PaksDatabase Db Connected
+2025-06-28 (13:11:00) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (13:11:00) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (13:11:00) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (13:11:00) -->  PaksDatabase Db Connected
+2025-06-28 (13:11:00) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (13:11:00) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (13:11:00) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (13:11:00) -->  PaksDatabase Db Connected
+2025-06-28 (13:11:00) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (13:11:00) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (13:11:00) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (13:11:39) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (13:11:39) -->  Skipped fp_module control due to the lock
+2025-06-28 (13:21:42) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (13:21:42) -->  Skipped fp_module control due to the lock
+2025-06-28 (13:31:44) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (13:31:44) -->  Skipped fp_module control due to the lock
+2025-06-28 (13:41:47) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (13:41:47) -->  Skipped fp_module control due to the lock
+2025-06-28 (13:51:49) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (13:51:49) -->  Skipped fp_module control due to the lock
+2025-06-28 (14:01:52) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (14:01:52) -->  Skipped fp_module control due to the lock
+2025-06-28 (14:11:00) -->  PaksDatabase Db Connected
+2025-06-28 (14:11:00) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (14:11:00) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (14:11:00) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (14:11:00) -->  PaksDatabase Db Connected
+2025-06-28 (14:11:00) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (14:11:00) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (14:11:00) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (14:11:00) -->  PaksDatabase Db Connected
+2025-06-28 (14:11:00) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (14:11:00) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (14:11:00) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (14:11:00) -->  PaksDatabase Db Connected
+2025-06-28 (14:11:00) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (14:11:00) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (14:11:00) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (14:11:00) -->  PaksDatabase Db Connected
+2025-06-28 (14:11:00) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (14:11:00) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (14:11:00) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (14:11:00) -->  PaksDatabase Db Connected
+2025-06-28 (14:11:00) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (14:11:00) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (14:11:00) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (14:11:00) -->  PaksDatabase Db Connected
+2025-06-28 (14:11:00) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (14:11:00) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (14:11:00) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (14:11:00) -->  PaksDatabase Db Connected
+2025-06-28 (14:11:00) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (14:11:00) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (14:11:00) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (14:11:00) -->  PaksDatabase Db Connected
+2025-06-28 (14:11:00) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (14:11:00) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (14:11:00) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (14:11:54) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (14:11:54) -->  Skipped fp_module control due to the lock
+2025-06-28 (14:21:57) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (14:21:57) -->  Skipped fp_module control due to the lock
+2025-06-28 (14:31:59) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (14:31:59) -->  Skipped fp_module control due to the lock
+2025-06-28 (14:42:01) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (14:42:01) -->  Skipped fp_module control due to the lock
+2025-06-28 (14:52:04) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (14:52:04) -->  Skipped fp_module control due to the lock
+2025-06-28 (15:02:06) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (15:02:06) -->  Skipped fp_module control due to the lock
+2025-06-28 (15:11:01) -->  PaksDatabase Db Connected
+2025-06-28 (15:11:01) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (15:11:01) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (15:11:01) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (15:11:01) -->  PaksDatabase Db Connected
+2025-06-28 (15:11:01) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (15:11:01) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (15:11:01) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (15:11:01) -->  PaksDatabase Db Connected
+2025-06-28 (15:11:01) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (15:11:01) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (15:11:01) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (15:11:01) -->  PaksDatabase Db Connected
+2025-06-28 (15:11:01) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (15:11:01) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (15:11:01) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (15:11:01) -->  PaksDatabase Db Connected
+2025-06-28 (15:11:01) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (15:11:01) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (15:11:01) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (15:11:01) -->  PaksDatabase Db Connected
+2025-06-28 (15:11:01) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (15:11:01) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (15:11:01) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (15:11:01) -->  PaksDatabase Db Connected
+2025-06-28 (15:11:01) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (15:11:01) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (15:11:01) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (15:11:01) -->  PaksDatabase Db Connected
+2025-06-28 (15:11:01) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (15:11:01) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (15:11:01) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (15:11:01) -->  PaksDatabase Db Connected
+2025-06-28 (15:11:01) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (15:11:01) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (15:11:01) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (15:12:09) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (15:12:09) -->  Skipped fp_module control due to the lock
+2025-06-28 (15:22:11) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (15:22:11) -->  Skipped fp_module control due to the lock
+2025-06-28 (15:32:14) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (15:32:14) -->  Skipped fp_module control due to the lock
+2025-06-28 (15:42:16) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (15:42:16) -->  Skipped fp_module control due to the lock
+2025-06-28 (15:52:18) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (15:52:18) -->  Skipped fp_module control due to the lock
+2025-06-28 (16:02:21) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (16:02:21) -->  Skipped fp_module control due to the lock
+2025-06-28 (16:11:01) -->  PaksDatabase Db Connected
+2025-06-28 (16:11:01) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (16:11:01) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (16:11:01) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (16:11:01) -->  PaksDatabase Db Connected
+2025-06-28 (16:11:01) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (16:11:01) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (16:11:01) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (16:11:01) -->  PaksDatabase Db Connected
+2025-06-28 (16:11:01) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (16:11:01) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (16:11:01) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (16:11:01) -->  PaksDatabase Db Connected
+2025-06-28 (16:11:01) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (16:11:01) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (16:11:01) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (16:11:01) -->  PaksDatabase Db Connected
+2025-06-28 (16:11:01) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (16:11:01) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (16:11:01) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (16:11:01) -->  PaksDatabase Db Connected
+2025-06-28 (16:11:01) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (16:11:01) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (16:11:01) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (16:11:01) -->  PaksDatabase Db Connected
+2025-06-28 (16:11:01) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (16:11:01) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (16:11:01) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (16:11:01) -->  PaksDatabase Db Connected
+2025-06-28 (16:11:01) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (16:11:01) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (16:11:01) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (16:11:01) -->  PaksDatabase Db Connected
+2025-06-28 (16:11:01) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (16:11:01) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (16:11:01) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (16:12:23) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (16:12:23) -->  Skipped fp_module control due to the lock
+2025-06-28 (16:22:26) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (16:22:26) -->  Skipped fp_module control due to the lock
+2025-06-28 (16:32:28) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (16:32:28) -->  Skipped fp_module control due to the lock
+2025-06-28 (16:42:30) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (16:42:30) -->  Skipped fp_module control due to the lock
+2025-06-28 (16:52:33) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (16:52:33) -->  Skipped fp_module control due to the lock
+2025-06-28 (17:02:35) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (17:02:35) -->  Skipped fp_module control due to the lock
+2025-06-28 (17:11:02) -->  PaksDatabase Db Connected
+2025-06-28 (17:11:02) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (17:11:02) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (17:11:02) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (17:11:02) -->  PaksDatabase Db Connected
+2025-06-28 (17:11:02) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (17:11:02) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (17:11:02) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (17:11:02) -->  PaksDatabase Db Connected
+2025-06-28 (17:11:02) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (17:11:02) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (17:11:02) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (17:11:02) -->  PaksDatabase Db Connected
+2025-06-28 (17:11:02) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (17:11:02) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (17:11:02) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (17:11:02) -->  PaksDatabase Db Connected
+2025-06-28 (17:11:02) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (17:11:02) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (17:11:02) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (17:11:02) -->  PaksDatabase Db Connected
+2025-06-28 (17:11:02) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (17:11:02) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (17:11:02) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (17:11:02) -->  PaksDatabase Db Connected
+2025-06-28 (17:11:02) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (17:11:02) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (17:11:02) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (17:11:02) -->  PaksDatabase Db Connected
+2025-06-28 (17:11:02) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (17:11:02) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (17:11:02) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (17:11:02) -->  PaksDatabase Db Connected
+2025-06-28 (17:11:02) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (17:11:02) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (17:11:02) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (17:12:37) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (17:12:37) -->  Skipped fp_module control due to the lock
+2025-06-28 (17:22:40) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (17:22:40) -->  Skipped fp_module control due to the lock
+2025-06-28 (17:32:42) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (17:32:42) -->  Skipped fp_module control due to the lock
+2025-06-28 (17:42:45) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (17:42:45) -->  Skipped fp_module control due to the lock
+2025-06-28 (17:52:47) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (17:52:47) -->  Skipped fp_module control due to the lock
+2025-06-28 (18:02:50) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (18:02:50) -->  Skipped fp_module control due to the lock
+2025-06-28 (18:11:02) -->  PaksDatabase Db Connected
+2025-06-28 (18:11:02) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (18:11:02) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (18:11:02) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (18:11:02) -->  PaksDatabase Db Connected
+2025-06-28 (18:11:02) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (18:11:02) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (18:11:02) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (18:11:02) -->  PaksDatabase Db Connected
+2025-06-28 (18:11:02) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (18:11:02) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (18:11:02) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (18:11:02) -->  PaksDatabase Db Connected
+2025-06-28 (18:11:02) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (18:11:02) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (18:11:02) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (18:11:02) -->  PaksDatabase Db Connected
+2025-06-28 (18:11:02) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (18:11:02) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (18:11:02) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (18:11:02) -->  PaksDatabase Db Connected
+2025-06-28 (18:11:02) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (18:11:02) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (18:11:02) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (18:11:02) -->  PaksDatabase Db Connected
+2025-06-28 (18:11:02) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (18:11:02) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (18:11:02) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (18:11:02) -->  PaksDatabase Db Connected
+2025-06-28 (18:11:02) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (18:11:02) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (18:11:02) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (18:11:02) -->  PaksDatabase Db Connected
+2025-06-28 (18:11:02) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (18:11:02) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (18:11:02) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (18:12:52) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (18:12:52) -->  Skipped fp_module control due to the lock
+2025-06-28 (18:22:54) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (18:22:54) -->  Skipped fp_module control due to the lock
+2025-06-28 (18:32:57) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (18:32:57) -->  Skipped fp_module control due to the lock
+2025-06-28 (18:42:59) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (18:42:59) -->  Skipped fp_module control due to the lock
+2025-06-28 (18:53:02) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (18:53:02) -->  Skipped fp_module control due to the lock
+2025-06-28 (19:03:04) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (19:03:04) -->  Skipped fp_module control due to the lock
+2025-06-28 (19:11:03) -->  PaksDatabase Db Connected
+2025-06-28 (19:11:03) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (19:11:03) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (19:11:03) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (19:11:03) -->  PaksDatabase Db Connected
+2025-06-28 (19:11:03) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (19:11:03) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (19:11:03) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (19:11:03) -->  PaksDatabase Db Connected
+2025-06-28 (19:11:03) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (19:11:03) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (19:11:03) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (19:11:03) -->  PaksDatabase Db Connected
+2025-06-28 (19:11:03) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (19:11:03) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (19:11:03) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (19:11:03) -->  PaksDatabase Db Connected
+2025-06-28 (19:11:03) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (19:11:03) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (19:11:03) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (19:11:03) -->  PaksDatabase Db Connected
+2025-06-28 (19:11:03) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (19:11:03) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (19:11:03) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (19:11:03) -->  PaksDatabase Db Connected
+2025-06-28 (19:11:03) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (19:11:03) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (19:11:03) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (19:11:03) -->  PaksDatabase Db Connected
+2025-06-28 (19:11:03) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (19:11:03) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (19:11:03) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (19:11:03) -->  PaksDatabase Db Connected
+2025-06-28 (19:11:03) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (19:11:03) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (19:11:03) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (19:13:07) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (19:13:07) -->  Skipped fp_module control due to the lock
+2025-06-28 (19:23:09) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (19:23:09) -->  Skipped fp_module control due to the lock
+2025-06-28 (19:33:11) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (19:33:11) -->  Skipped fp_module control due to the lock
+2025-06-28 (19:43:14) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (19:43:14) -->  Skipped fp_module control due to the lock
+2025-06-28 (19:53:16) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (19:53:16) -->  Skipped fp_module control due to the lock
+2025-06-28 (20:03:18) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (20:03:18) -->  Skipped fp_module control due to the lock
+2025-06-28 (20:11:03) -->  PaksDatabase Db Connected
+2025-06-28 (20:11:03) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (20:11:03) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (20:11:03) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (20:11:03) -->  PaksDatabase Db Connected
+2025-06-28 (20:11:03) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (20:11:03) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (20:11:03) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (20:11:03) -->  PaksDatabase Db Connected
+2025-06-28 (20:11:03) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (20:11:03) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (20:11:03) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (20:11:03) -->  PaksDatabase Db Connected
+2025-06-28 (20:11:03) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (20:11:03) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (20:11:03) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (20:11:03) -->  PaksDatabase Db Connected
+2025-06-28 (20:11:03) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (20:11:03) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (20:11:03) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (20:11:03) -->  PaksDatabase Db Connected
+2025-06-28 (20:11:03) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (20:11:03) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (20:11:03) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (20:11:03) -->  PaksDatabase Db Connected
+2025-06-28 (20:11:03) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (20:11:03) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (20:11:03) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (20:11:03) -->  PaksDatabase Db Connected
+2025-06-28 (20:11:03) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (20:11:03) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (20:11:03) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (20:11:03) -->  PaksDatabase Db Connected
+2025-06-28 (20:11:03) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (20:11:03) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (20:11:03) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (20:13:21) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (20:13:21) -->  Skipped fp_module control due to the lock
+2025-06-28 (20:23:23) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (20:23:23) -->  Skipped fp_module control due to the lock
+2025-06-28 (20:33:26) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (20:33:26) -->  Skipped fp_module control due to the lock
+2025-06-28 (20:43:28) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (20:43:28) -->  Skipped fp_module control due to the lock
+2025-06-28 (20:53:31) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (20:53:31) -->  Skipped fp_module control due to the lock
+2025-06-28 (21:03:33) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (21:03:33) -->  Skipped fp_module control due to the lock
+2025-06-28 (21:11:04) -->  PaksDatabase Db Connected
+2025-06-28 (21:11:04) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (21:11:04) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (21:11:04) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (21:11:04) -->  PaksDatabase Db Connected
+2025-06-28 (21:11:04) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (21:11:04) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (21:11:04) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (21:11:04) -->  PaksDatabase Db Connected
+2025-06-28 (21:11:04) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (21:11:04) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (21:11:04) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (21:11:04) -->  PaksDatabase Db Connected
+2025-06-28 (21:11:04) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (21:11:04) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (21:11:04) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (21:11:04) -->  PaksDatabase Db Connected
+2025-06-28 (21:11:04) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (21:11:04) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (21:11:04) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (21:11:04) -->  PaksDatabase Db Connected
+2025-06-28 (21:11:04) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (21:11:04) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (21:11:04) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (21:11:04) -->  PaksDatabase Db Connected
+2025-06-28 (21:11:04) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (21:11:04) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (21:11:04) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (21:11:04) -->  PaksDatabase Db Connected
+2025-06-28 (21:11:04) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (21:11:04) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (21:11:04) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (21:11:04) -->  PaksDatabase Db Connected
+2025-06-28 (21:11:04) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (21:11:04) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (21:11:04) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (21:13:36) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (21:13:36) -->  Skipped fp_module control due to the lock
+2025-06-28 (21:23:38) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (21:23:38) -->  Skipped fp_module control due to the lock
+2025-06-28 (21:33:41) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (21:33:41) -->  Skipped fp_module control due to the lock
+2025-06-28 (21:43:43) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (21:43:43) -->  Skipped fp_module control due to the lock
+2025-06-28 (21:53:45) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (21:53:45) -->  Skipped fp_module control due to the lock
+2025-06-28 (22:03:48) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (22:03:48) -->  Skipped fp_module control due to the lock
+2025-06-28 (22:11:04) -->  PaksDatabase Db Connected
+2025-06-28 (22:11:04) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (22:11:04) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (22:11:04) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (22:11:04) -->  PaksDatabase Db Connected
+2025-06-28 (22:11:04) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (22:11:04) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (22:11:04) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (22:11:04) -->  PaksDatabase Db Connected
+2025-06-28 (22:11:04) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (22:11:04) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (22:11:04) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (22:11:04) -->  PaksDatabase Db Connected
+2025-06-28 (22:11:04) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (22:11:04) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (22:11:04) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (22:11:04) -->  PaksDatabase Db Connected
+2025-06-28 (22:11:04) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (22:11:04) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (22:11:04) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (22:11:04) -->  PaksDatabase Db Connected
+2025-06-28 (22:11:04) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (22:11:04) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (22:11:04) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (22:11:04) -->  PaksDatabase Db Connected
+2025-06-28 (22:11:04) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (22:11:04) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (22:11:04) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (22:11:04) -->  PaksDatabase Db Connected
+2025-06-28 (22:11:04) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (22:11:04) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (22:11:04) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (22:11:04) -->  PaksDatabase Db Connected
+2025-06-28 (22:11:04) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (22:11:04) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (22:11:04) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (22:13:50) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (22:13:50) -->  Skipped fp_module control due to the lock
+2025-06-28 (22:23:53) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (22:23:53) -->  Skipped fp_module control due to the lock
+2025-06-28 (22:33:55) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (22:33:55) -->  Skipped fp_module control due to the lock
+2025-06-28 (22:43:57) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (22:43:57) -->  Skipped fp_module control due to the lock
+2025-06-28 (22:54:00) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (22:54:00) -->  Skipped fp_module control due to the lock
+2025-06-28 (23:04:02) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (23:04:02) -->  Skipped fp_module control due to the lock
+2025-06-28 (23:11:05) -->  PaksDatabase Db Connected
+2025-06-28 (23:11:05) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (23:11:05) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (23:11:05) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (23:11:05) -->  PaksDatabase Db Connected
+2025-06-28 (23:11:05) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (23:11:05) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-06-28 (23:11:05) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (23:11:05) -->  PaksDatabase Db Connected
+2025-06-28 (23:11:05) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (23:11:05) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (23:11:05) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (23:11:05) -->  PaksDatabase Db Connected
+2025-06-28 (23:11:05) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (23:11:05) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-06-28 (23:11:05) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (23:11:05) -->  PaksDatabase Db Connected
+2025-06-28 (23:11:05) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (23:11:05) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (23:11:05) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (23:11:05) -->  PaksDatabase Db Connected
+2025-06-28 (23:11:05) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (23:11:05) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-06-28 (23:11:05) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (23:11:05) -->  PaksDatabase Db Connected
+2025-06-28 (23:11:05) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (23:11:05) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-06-28 (23:11:05) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (23:11:05) -->  PaksDatabase Db Connected
+2025-06-28 (23:11:05) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (23:11:05) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-06-28 (23:11:05) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (23:11:05) -->  PaksDatabase Db Connected
+2025-06-28 (23:11:05) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (23:11:05) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-06-28 (23:11:05) -->  PaksDatabase Db Connection Closed..
+2025-06-28 (23:14:05) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (23:14:05) -->  Skipped fp_module control due to the lock
+2025-06-28 (23:24:07) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (23:24:07) -->  Skipped fp_module control due to the lock
+2025-06-28 (23:34:09) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (23:34:09) -->  Skipped fp_module control due to the lock
+2025-06-28 (23:44:12) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (23:44:12) -->  Skipped fp_module control due to the lock
+2025-06-28 (23:50:01) -->  MySQL yedeði alýndý: FTP\db\mysql_backup_20250628_235000.sql
+2025-06-28 (23:54:14) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-06-28 (23:54:14) -->  Skipped fp_module control due to the lock
+2025-06-28 (23:55:00) -->  photos yedekleme tamamlandý.

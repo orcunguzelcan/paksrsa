@@ -1,0 +1,668 @@
+2025-07-03 (00:05:00) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (00:05:00) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (00:05:00) -->  Skipped fp_module control due to the lock
+2025-07-03 (00:15:03) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (00:15:03) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (00:15:03) -->  Skipped fp_module control due to the lock
+2025-07-03 (00:23:19) -->  PaksDatabase Db Connected
+2025-07-03 (00:23:19) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (00:23:19) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (00:23:19) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (00:23:19) -->  PaksDatabase Db Connected
+2025-07-03 (00:23:19) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (00:23:19) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (00:23:19) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (00:23:19) -->  PaksDatabase Db Connected
+2025-07-03 (00:23:19) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (00:23:19) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (00:23:19) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (00:23:19) -->  PaksDatabase Db Connected
+2025-07-03 (00:23:19) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (00:23:19) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (00:23:19) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (00:23:19) -->  PaksDatabase Db Connected
+2025-07-03 (00:23:19) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (00:23:19) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (00:23:19) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (00:23:19) -->  PaksDatabase Db Connected
+2025-07-03 (00:23:19) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (00:23:19) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (00:23:19) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (00:23:19) -->  PaksDatabase Db Connected
+2025-07-03 (00:23:19) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (00:23:19) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (00:23:19) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (00:23:19) -->  PaksDatabase Db Connected
+2025-07-03 (00:23:19) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (00:23:19) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (00:23:19) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (00:23:19) -->  PaksDatabase Db Connected
+2025-07-03 (00:23:19) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (00:23:19) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (00:23:19) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (00:25:05) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (00:25:05) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (00:25:05) -->  Skipped fp_module control due to the lock
+2025-07-03 (00:35:08) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (00:35:08) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (00:35:08) -->  Skipped fp_module control due to the lock
+2025-07-03 (00:45:11) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (00:45:11) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (00:45:11) -->  Skipped fp_module control due to the lock
+2025-07-03 (00:55:13) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (00:55:13) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (00:55:13) -->  Skipped fp_module control due to the lock
+2025-07-03 (01:05:16) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (01:05:16) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (01:05:16) -->  Skipped fp_module control due to the lock
+2025-07-03 (01:15:18) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (01:15:18) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (01:15:18) -->  Skipped fp_module control due to the lock
+2025-07-03 (01:23:20) -->  PaksDatabase Db Connected
+2025-07-03 (01:23:20) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (01:23:20) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (01:23:20) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (01:23:20) -->  PaksDatabase Db Connected
+2025-07-03 (01:23:20) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (01:23:20) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (01:23:20) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (01:23:20) -->  PaksDatabase Db Connected
+2025-07-03 (01:23:20) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (01:23:20) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (01:23:20) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (01:23:20) -->  PaksDatabase Db Connected
+2025-07-03 (01:23:20) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (01:23:20) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (01:23:20) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (01:23:20) -->  PaksDatabase Db Connected
+2025-07-03 (01:23:20) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (01:23:20) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (01:23:20) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (01:23:20) -->  PaksDatabase Db Connected
+2025-07-03 (01:23:20) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (01:23:20) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (01:23:20) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (01:23:20) -->  PaksDatabase Db Connected
+2025-07-03 (01:23:20) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (01:23:20) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (01:23:20) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (01:23:20) -->  PaksDatabase Db Connected
+2025-07-03 (01:23:20) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (01:23:20) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (01:23:20) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (01:23:20) -->  PaksDatabase Db Connected
+2025-07-03 (01:23:20) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (01:23:20) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (01:23:20) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (01:25:21) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (01:25:21) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (01:25:21) -->  Skipped fp_module control due to the lock
+2025-07-03 (01:35:24) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (01:35:24) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (01:35:24) -->  Skipped fp_module control due to the lock
+2025-07-03 (01:45:26) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (01:45:26) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (01:45:26) -->  Skipped fp_module control due to the lock
+2025-07-03 (01:55:29) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (01:55:29) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (01:55:29) -->  Skipped fp_module control due to the lock
+2025-07-03 (02:05:31) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (02:05:31) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (02:05:31) -->  Skipped fp_module control due to the lock
+2025-07-03 (02:15:34) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (02:15:34) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (02:15:34) -->  Skipped fp_module control due to the lock
+2025-07-03 (02:23:20) -->  PaksDatabase Db Connected
+2025-07-03 (02:23:20) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (02:23:20) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (02:23:20) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (02:23:20) -->  PaksDatabase Db Connected
+2025-07-03 (02:23:20) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (02:23:20) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (02:23:20) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (02:23:20) -->  PaksDatabase Db Connected
+2025-07-03 (02:23:20) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (02:23:20) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (02:23:20) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (02:23:20) -->  PaksDatabase Db Connected
+2025-07-03 (02:23:20) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (02:23:20) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (02:23:20) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (02:23:20) -->  PaksDatabase Db Connected
+2025-07-03 (02:23:20) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (02:23:20) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (02:23:20) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (02:23:20) -->  PaksDatabase Db Connected
+2025-07-03 (02:23:20) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (02:23:20) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (02:23:20) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (02:23:20) -->  PaksDatabase Db Connected
+2025-07-03 (02:23:20) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (02:23:20) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (02:23:20) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (02:23:20) -->  PaksDatabase Db Connected
+2025-07-03 (02:23:20) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (02:23:20) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (02:23:20) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (02:23:21) -->  PaksDatabase Db Connected
+2025-07-03 (02:23:21) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (02:23:21) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (02:23:21) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (02:25:37) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (02:25:37) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (02:25:37) -->  Skipped fp_module control due to the lock
+2025-07-03 (02:35:39) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (02:35:39) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (02:35:39) -->  Skipped fp_module control due to the lock
+2025-07-03 (02:45:42) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (02:45:42) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (02:45:42) -->  Skipped fp_module control due to the lock
+2025-07-03 (02:55:44) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (02:55:44) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (02:55:44) -->  Skipped fp_module control due to the lock
+2025-07-03 (03:00:00) -->  Dosyalar gönderiliyor...
+2025-07-03 (03:00:01) -->  Dosyalar gönderildi...
+2025-07-03 (03:00:01) -->  Dosyalar silindi.
+2025-07-03 (03:05:47) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (03:05:47) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (03:05:47) -->  Skipped fp_module control due to the lock
+2025-07-03 (03:15:50) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (03:15:50) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (03:15:50) -->  Skipped fp_module control due to the lock
+2025-07-03 (03:23:21) -->  PaksDatabase Db Connected
+2025-07-03 (03:23:21) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (03:23:21) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (03:23:21) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (03:23:21) -->  PaksDatabase Db Connected
+2025-07-03 (03:23:21) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (03:23:21) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (03:23:21) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (03:23:21) -->  PaksDatabase Db Connected
+2025-07-03 (03:23:21) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (03:23:21) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (03:23:21) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (03:23:21) -->  PaksDatabase Db Connected
+2025-07-03 (03:23:21) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (03:23:21) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (03:23:21) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (03:23:21) -->  PaksDatabase Db Connected
+2025-07-03 (03:23:21) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (03:23:21) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (03:23:21) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (03:23:21) -->  PaksDatabase Db Connected
+2025-07-03 (03:23:21) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (03:23:21) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (03:23:21) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (03:23:21) -->  PaksDatabase Db Connected
+2025-07-03 (03:23:21) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (03:23:21) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (03:23:21) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (03:23:21) -->  PaksDatabase Db Connected
+2025-07-03 (03:23:21) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (03:23:21) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (03:23:21) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (03:23:21) -->  PaksDatabase Db Connected
+2025-07-03 (03:23:21) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (03:23:21) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (03:23:21) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (03:25:52) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (03:25:52) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (03:25:52) -->  Skipped fp_module control due to the lock
+2025-07-03 (03:35:55) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (03:35:55) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (03:35:55) -->  Skipped fp_module control due to the lock
+2025-07-03 (03:45:57) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (03:45:57) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (03:45:57) -->  Skipped fp_module control due to the lock
+2025-07-03 (03:56:00) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (03:56:00) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (03:56:00) -->  Skipped fp_module control due to the lock
+2025-07-03 (04:00:00) -->  Servisler yeniden baþlatýldý.
+2025-07-03 (04:06:03) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (04:06:03) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (04:06:03) -->  Skipped fp_module control due to the lock
+2025-07-03 (04:16:05) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (04:16:05) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (04:16:05) -->  Skipped fp_module control due to the lock
+2025-07-03 (04:23:22) -->  PaksDatabase Db Connected
+2025-07-03 (04:23:22) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (04:23:22) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (04:23:22) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (04:23:22) -->  PaksDatabase Db Connected
+2025-07-03 (04:23:22) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (04:23:22) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (04:23:22) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (04:23:22) -->  PaksDatabase Db Connected
+2025-07-03 (04:23:22) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (04:23:22) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (04:23:22) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (04:23:22) -->  PaksDatabase Db Connected
+2025-07-03 (04:23:22) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (04:23:22) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (04:23:22) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (04:23:22) -->  PaksDatabase Db Connected
+2025-07-03 (04:23:22) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (04:23:22) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (04:23:22) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (04:23:22) -->  PaksDatabase Db Connected
+2025-07-03 (04:23:22) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (04:23:22) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (04:23:22) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (04:23:22) -->  PaksDatabase Db Connected
+2025-07-03 (04:23:22) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (04:23:22) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (04:23:22) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (04:23:22) -->  PaksDatabase Db Connected
+2025-07-03 (04:23:22) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (04:23:22) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (04:23:22) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (04:23:22) -->  PaksDatabase Db Connected
+2025-07-03 (04:23:22) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (04:23:22) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (04:23:22) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (04:26:08) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (04:26:08) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (04:26:08) -->  Skipped fp_module control due to the lock
+2025-07-03 (04:36:11) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (04:36:11) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (04:36:11) -->  Skipped fp_module control due to the lock
+2025-07-03 (04:46:13) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (04:46:13) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (04:46:13) -->  Skipped fp_module control due to the lock
+2025-07-03 (04:56:16) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (04:56:16) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (04:56:16) -->  Skipped fp_module control due to the lock
+2025-07-03 (05:06:18) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (05:06:18) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (05:06:18) -->  Skipped fp_module control due to the lock
+2025-07-03 (05:16:21) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (05:16:21) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (05:16:21) -->  Skipped fp_module control due to the lock
+2025-07-03 (05:23:23) -->  PaksDatabase Db Connected
+2025-07-03 (05:23:23) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (05:23:23) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (05:23:23) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (05:23:23) -->  PaksDatabase Db Connected
+2025-07-03 (05:23:23) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (05:23:23) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (05:23:23) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (05:23:23) -->  PaksDatabase Db Connected
+2025-07-03 (05:23:23) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (05:23:23) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (05:23:23) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (05:23:23) -->  PaksDatabase Db Connected
+2025-07-03 (05:23:23) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (05:23:23) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (05:23:23) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (05:23:23) -->  PaksDatabase Db Connected
+2025-07-03 (05:23:23) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (05:23:23) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (05:23:23) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (05:23:23) -->  PaksDatabase Db Connected
+2025-07-03 (05:23:23) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (05:23:23) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (05:23:23) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (05:23:23) -->  PaksDatabase Db Connected
+2025-07-03 (05:23:23) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (05:23:23) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (05:23:23) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (05:23:23) -->  PaksDatabase Db Connected
+2025-07-03 (05:23:23) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (05:23:23) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (05:23:23) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (05:23:23) -->  PaksDatabase Db Connected
+2025-07-03 (05:23:23) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (05:23:23) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (05:23:23) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (05:26:24) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (05:26:24) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (05:26:24) -->  Skipped fp_module control due to the lock
+2025-07-03 (05:36:26) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (05:36:26) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (05:36:26) -->  Skipped fp_module control due to the lock
+2025-07-03 (05:46:29) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (05:46:29) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (05:46:29) -->  Skipped fp_module control due to the lock
+2025-07-03 (05:56:32) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (05:56:32) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (05:56:32) -->  Skipped fp_module control due to the lock
+2025-07-03 (06:06:34) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (06:06:34) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (06:06:34) -->  Skipped fp_module control due to the lock
+2025-07-03 (06:16:37) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (06:16:37) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (06:16:37) -->  Skipped fp_module control due to the lock
+2025-07-03 (06:23:23) -->  PaksDatabase Db Connected
+2025-07-03 (06:23:23) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (06:23:23) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (06:23:23) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (06:23:23) -->  PaksDatabase Db Connected
+2025-07-03 (06:23:23) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (06:23:23) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (06:23:23) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (06:23:23) -->  PaksDatabase Db Connected
+2025-07-03 (06:23:23) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (06:23:23) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (06:23:23) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (06:23:23) -->  PaksDatabase Db Connected
+2025-07-03 (06:23:23) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (06:23:23) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (06:23:23) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (06:23:23) -->  PaksDatabase Db Connected
+2025-07-03 (06:23:23) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (06:23:23) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (06:23:23) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (06:23:23) -->  PaksDatabase Db Connected
+2025-07-03 (06:23:23) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (06:23:23) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (06:23:23) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (06:23:23) -->  PaksDatabase Db Connected
+2025-07-03 (06:23:23) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (06:23:23) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (06:23:23) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (06:23:23) -->  PaksDatabase Db Connected
+2025-07-03 (06:23:23) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (06:23:23) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (06:23:23) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (06:23:23) -->  PaksDatabase Db Connected
+2025-07-03 (06:23:23) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (06:23:23) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (06:23:23) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (06:26:39) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (06:26:39) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (06:26:39) -->  Skipped fp_module control due to the lock
+2025-07-03 (06:36:42) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (06:36:42) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (06:36:42) -->  Skipped fp_module control due to the lock
+2025-07-03 (06:46:45) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (06:46:45) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (06:46:45) -->  Skipped fp_module control due to the lock
+2025-07-03 (06:56:47) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (06:56:47) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (06:56:47) -->  Skipped fp_module control due to the lock
+2025-07-03 (07:06:50) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (07:06:50) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (07:06:50) -->  Skipped fp_module control due to the lock
+2025-07-03 (07:16:53) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (07:16:53) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (07:16:53) -->  Skipped fp_module control due to the lock
+2025-07-03 (07:23:24) -->  PaksDatabase Db Connected
+2025-07-03 (07:23:24) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (07:23:24) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (07:23:24) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (07:23:24) -->  PaksDatabase Db Connected
+2025-07-03 (07:23:24) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (07:23:24) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (07:23:24) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (07:23:24) -->  PaksDatabase Db Connected
+2025-07-03 (07:23:24) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (07:23:24) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (07:23:24) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (07:23:24) -->  PaksDatabase Db Connected
+2025-07-03 (07:23:24) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (07:23:24) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (07:23:24) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (07:23:24) -->  PaksDatabase Db Connected
+2025-07-03 (07:23:24) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (07:23:24) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (07:23:24) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (07:23:24) -->  PaksDatabase Db Connected
+2025-07-03 (07:23:24) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (07:23:24) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (07:23:24) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (07:23:24) -->  PaksDatabase Db Connected
+2025-07-03 (07:23:24) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (07:23:24) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (07:23:24) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (07:23:24) -->  PaksDatabase Db Connected
+2025-07-03 (07:23:24) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (07:23:24) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (07:23:24) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (07:23:24) -->  PaksDatabase Db Connected
+2025-07-03 (07:23:24) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (07:23:24) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (07:23:24) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (07:26:55) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (07:26:55) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (07:26:55) -->  Skipped fp_module control due to the lock
+2025-07-03 (07:36:58) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (07:36:58) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (07:36:58) -->  Skipped fp_module control due to the lock
+2025-07-03 (07:47:00) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (07:47:00) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (07:47:00) -->  Skipped fp_module control due to the lock
+2025-07-03 (07:57:03) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (07:57:03) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (07:57:03) -->  Skipped fp_module control due to the lock
+2025-07-03 (08:07:06) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (08:07:06) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (08:07:06) -->  Skipped fp_module control due to the lock
+2025-07-03 (08:17:08) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (08:17:08) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (08:17:08) -->  Skipped fp_module control due to the lock
+2025-07-03 (08:23:25) -->  PaksDatabase Db Connected
+2025-07-03 (08:23:25) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (08:23:25) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (08:23:25) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (08:23:25) -->  PaksDatabase Db Connected
+2025-07-03 (08:23:25) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (08:23:25) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (08:23:25) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (08:23:25) -->  PaksDatabase Db Connected
+2025-07-03 (08:23:25) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (08:23:25) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (08:23:25) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (08:23:25) -->  PaksDatabase Db Connected
+2025-07-03 (08:23:25) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (08:23:25) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (08:23:25) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (08:23:25) -->  PaksDatabase Db Connected
+2025-07-03 (08:23:25) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (08:23:25) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (08:23:25) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (08:23:25) -->  PaksDatabase Db Connected
+2025-07-03 (08:23:25) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (08:23:25) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (08:23:25) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (08:23:25) -->  PaksDatabase Db Connected
+2025-07-03 (08:23:25) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (08:23:25) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (08:23:25) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (08:23:25) -->  PaksDatabase Db Connected
+2025-07-03 (08:23:25) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (08:23:25) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (08:23:25) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (08:23:25) -->  PaksDatabase Db Connected
+2025-07-03 (08:23:25) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (08:23:25) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (08:23:25) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (08:27:11) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (08:27:11) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (08:27:11) -->  Skipped fp_module control due to the lock
+2025-07-03 (08:37:14) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (08:37:14) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (08:37:14) -->  Skipped fp_module control due to the lock
+2025-07-03 (08:47:16) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (08:47:16) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (08:47:16) -->  Skipped fp_module control due to the lock
+2025-07-03 (08:57:19) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (08:57:19) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (08:57:19) -->  Skipped fp_module control due to the lock
+2025-07-03 (09:07:21) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (09:07:21) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (09:07:21) -->  Skipped fp_module control due to the lock
+2025-07-03 (09:17:24) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (09:17:24) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (09:17:24) -->  Skipped fp_module control due to the lock
+2025-07-03 (09:23:25) -->  PaksDatabase Db Connected
+2025-07-03 (09:23:25) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (09:23:25) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (09:23:25) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (09:23:25) -->  PaksDatabase Db Connected
+2025-07-03 (09:23:25) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (09:23:25) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (09:23:25) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (09:23:25) -->  PaksDatabase Db Connected
+2025-07-03 (09:23:25) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (09:23:25) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (09:23:25) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (09:23:25) -->  PaksDatabase Db Connected
+2025-07-03 (09:23:25) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (09:23:25) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (09:23:25) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (09:23:25) -->  PaksDatabase Db Connected
+2025-07-03 (09:23:25) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (09:23:25) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (09:23:25) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (09:23:25) -->  PaksDatabase Db Connected
+2025-07-03 (09:23:25) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (09:23:25) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (09:23:25) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (09:23:25) -->  PaksDatabase Db Connected
+2025-07-03 (09:23:25) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (09:23:25) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (09:23:25) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (09:23:25) -->  PaksDatabase Db Connected
+2025-07-03 (09:23:25) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (09:23:25) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (09:23:25) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (09:23:25) -->  PaksDatabase Db Connected
+2025-07-03 (09:23:25) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (09:23:25) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (09:23:25) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (09:27:27) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (09:27:27) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (09:27:27) -->  Skipped fp_module control due to the lock
+2025-07-03 (09:37:29) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (09:37:29) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (09:37:29) -->  Skipped fp_module control due to the lock
+2025-07-03 (09:47:32) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (09:47:32) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (09:47:32) -->  Skipped fp_module control due to the lock
+2025-07-03 (09:57:35) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (09:57:35) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (09:57:35) -->  Skipped fp_module control due to the lock
+2025-07-03 (10:07:37) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (10:07:37) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (10:07:37) -->  Skipped fp_module control due to the lock
+2025-07-03 (10:17:40) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (10:17:40) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (10:17:40) -->  Skipped fp_module control due to the lock
+2025-07-03 (10:23:26) -->  PaksDatabase Db Connected
+2025-07-03 (10:23:26) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (10:23:26) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (10:23:26) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (10:23:26) -->  PaksDatabase Db Connected
+2025-07-03 (10:23:26) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (10:23:26) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 1 executed
+2025-07-03 (10:23:26) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (10:23:26) -->  PaksDatabase Db Connected
+2025-07-03 (10:23:26) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (10:23:26) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 11 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (10:23:26) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (10:23:26) -->  PaksDatabase Db Connected
+2025-07-03 (10:23:26) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (10:23:26) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 1 executed
+2025-07-03 (10:23:26) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (10:23:26) -->  PaksDatabase Db Connected
+2025-07-03 (10:23:26) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (10:23:26) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 12 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (10:23:26) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (10:23:26) -->  PaksDatabase Db Connected
+2025-07-03 (10:23:26) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (10:23:26) -->  PaksDatabase SELECT id FROM crime_check_times where deleted_at is null and crime_id = 13 and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1 executed
+2025-07-03 (10:23:26) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (10:23:26) -->  PaksDatabase Db Connected
+2025-07-03 (10:23:26) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (10:23:26) -->  PaksDatabase SELECT id FROM people WHERE deleted_at is null executed
+2025-07-03 (10:23:26) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (10:23:26) -->  PaksDatabase Db Connected
+2025-07-03 (10:23:26) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (10:23:26) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '1' and status = 0 executed
+2025-07-03 (10:23:26) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (10:23:26) -->  PaksDatabase Db Connected
+2025-07-03 (10:23:26) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (10:23:26) -->  PaksDatabase SELECT id FROM crimes where deleted_at is null and person_id = '2' and status = 0 executed
+2025-07-03 (10:23:26) -->  PaksDatabase Db Connection Closed..
+2025-07-03 (10:27:42) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (10:27:42) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (10:27:42) -->  Skipped fp_module control due to the lock
+2025-07-03 (10:37:45) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (10:37:45) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (10:37:45) -->  Skipped fp_module control due to the lock
+2025-07-03 (10:47:48) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (10:47:48) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (10:47:48) -->  Skipped fp_module control due to the lock
+2025-07-03 (10:57:51) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (10:57:51) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (10:57:51) -->  Skipped fp_module control due to the lock
+2025-07-03 (11:07:53) -->  Fingerprint Sensor Init Exception: -900
+   konum: Aratek.TrustFinger.TrustFingerDevice.Open(Int32 deviceIndex)
+2025-07-03 (11:07:53) -->  Check fingerprint module exception: is_device_open() missing 1 required positional argument: 'dev'
+2025-07-03 (11:07:53) -->  Skipped fp_module control due to the lock
