@@ -1,3 +1,5 @@
+import pythonnet
+pythonnet.load("netfx")
 import clr
 import os
 import sys

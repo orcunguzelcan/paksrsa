@@ -1,97 +1,97 @@
 import tkinter as tk
-
 from PIL import Image, ImageTk
-
-from tckn_screen import open_tckn_screen  # Kimlik numarası giriş ekranını başka bir dosyadan çağır
-
+import tckn_screen  # Tarama ekranı modülü
 import RoutineJobs
-
 from datetime import datetime
-
 import sys
+import video_stream
+import threading
+import user_process
 
-routine_jobs=RoutineJobs.RoutineJobs()
+# --- 1. KAMERA SERVİSİNİ BAŞLAT ---
+video_stream.start_camera_service()
 
+server_thread = threading.Thread(target=user_process.run, daemon=True)
+server_thread.start()
+# --- 2. ARKA PLAN İŞLERİNİ BAŞLAT ---
+routine_jobs = RoutineJobs.RoutineJobs()
 
-
-
- # ilk çağrı
-
-# Ana pencereyi oluştur
+# --- 3. ANA PENCEREYİ OLUŞTUR ---
 root = tk.Tk()
 root.title("RSA PAKS")
 root.attributes("-fullscreen", True)
 root.resizable(False, False)
-#root.geometry("800x480")  # Raspberry Pi ekranı için uygun bir boyut
 
-window_width=root.winfo_width()
-window_height=root.winfo_height()
+# Ekran boyutlarını al
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
 
-# Solda bir resim eklemek için bir çerçeve
-left_frame = tk.Frame(root, width=768, height=600)
-#left_frame = tk.Frame(root, width=600, height=480)
-left_frame.pack(side=tk.LEFT, fill=tk.Y, padx=0, pady=0)  # Boşlukları kaldır
-left_frame.pack_propagate(False)
+# --- 4. ARKA PLAN VE SAAT ---
+canvas = tk.Canvas(root, width=screen_width, height=screen_height, highlightthickness=0)
+canvas.pack(fill=tk.BOTH, expand=True)
 
+background_photo = None
+time_text = None
 
-
-
-# Resmi yükle ve boyutlandır
 try:
-    # Resmi PIL ile yükleyip boyutlandırıyoruz
-    img = Image.open("PAKS-PHOTO/paks.png")  # Resim dosyasının yolu
-    img = img.resize((768, 600), Image.Resampling.LANCZOS)  # Resmi boyutlandır
-    #img = img.resize((600, 480), Image.Resampling.LANCZOS)  # Resmi boyutlandır
-    photo = ImageTk.PhotoImage(img)
+    # Resmi yükle ve EKRAN BOYUTUNA GÖRE tam kapla
+    img = Image.open("PAKS-PHOTO/paks.png")
+    img = img.resize((screen_width, screen_height), Image.Resampling.LANCZOS)
+    background_photo = ImageTk.PhotoImage(img)
 
-    # Resmi etiket içine ekliyoruz
-    #image_label = tk.Label(left_frame, image=photo)
-    #image_label.image = photo  # Referans sakla
-    #image_label.pack(expand=True, fill=tk.BOTH)
-    
-    # Canvas ile resim ve saat gösterimi
-    canvas = tk.Canvas(left_frame, width=768, height=600, highlightthickness=0)
-    canvas.pack(fill=tk.BOTH, expand=True)
-    canvas.create_image(0, 0, anchor=tk.NW, image=photo)
-    
+    # Resmi canvas'a yerleştir
+    canvas.create_image(0, 0, anchor=tk.NW, image=background_photo)
+
+    # --- SAAT AYARI (DEĞİŞTİ) ---
+    # Konum: Ekranın tam ortası (width/2) ve butonun altı (height * 0.85)
+    # Boyut: 40 Punto
     time_text = canvas.create_text(
-    760, 590,
-    text="Yükleniyor...",
-    fill="#630e0e",  # Buraya özel rengin geldi
-    font=("Helvetica", 25, "bold"),
-    anchor=tk.SE)    
+        screen_width / 2,  # Yatayda Tam Orta
+        screen_height * 0.85,  # Dikeyde %85 aşağısı (Butonun altı)
+        text=datetime.now().strftime("%d-%m-%Y %H:%M:%S"),
+        fill="#630e0e",
+        font=("Helvetica", 50, "bold"),  # Font BÜYÜTÜLDÜ
+        anchor=tk.CENTER  # Metni merkezden hizala
+    )
 except Exception as e:
     print(f"Resim yüklenemedi: {e}")
+    canvas.config(bg="white")
 
-# Sağda bir buton eklemek için bir çerçeve
-right_frame = tk.Frame(root, width=256, height=600, bg="lightgray")
-#right_frame = tk.Frame(root, width=200, height=480, bg="lightgray")
-right_frame.pack(side=tk.RIGHT, fill=tk.BOTH, padx=0, pady=0)  # Boşlukları kaldır
-right_frame.pack_propagate(False)
-
-# "TCKN Giriş" butonu, sağ çerçevenin tamamını kaplasın
-tckn_button = tk.Button(
-    right_frame,
-    text="TCKN Giriş",
-    font=("Arial", 16),
+# --- 5. ORTA BUTON ---
+scan_button = tk.Button(
+    root,
+    text="PARMAK İZİ\nOKUTUN",
+    font=("Arial", 28, "bold"),
     bg="#630e0e",
     fg="white",
-    command=lambda: open_tckn_screen(root)
+    activebackground="red",
+    activeforeground="white",
+    bd=5,
+    relief="raised",
+    cursor="hand2",
+    command=lambda: tckn_screen.start_scan_process(root)
 )
-tckn_button.pack(expand=True, fill=tk.BOTH)  # Çerçevenin tamamını kapla
 
+# Butonun Konumu (Ekranın %65 aşağısında)
+scan_button.place(relx=0.5, rely=0.65, anchor=tk.CENTER, width=500, height=200)
+
+
+# --- 6. SAAT GÜNCELLEME ---
 def update_time():
     now = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
-    canvas.itemconfig(time_text, text=now)
-    canvas.after(1000, update_time)
+    try:
+        if canvas is not None and time_text is not None:
+            canvas.itemconfig(time_text, text=now)
+    except Exception:
+        pass
+    root.after(1000, update_time)
 
-update_time() 
 
+update_time()
 
-
-# Pencereyi çalıştır
+# --- 7. BAŞLAT ---
 try:
     root.mainloop()
 except KeyboardInterrupt:
-    print("Kullanıcı Ctrl+C yaptı, çıkılıyor...")
+    print("Çıkış yapılıyor...")
     sys.exit(-1)

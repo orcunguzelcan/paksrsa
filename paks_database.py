@@ -57,7 +57,7 @@ class PaksDatabase:
             except Error as e:
                 print("Error while connecting to MySQL", e)
                 break
-            except IndexError or KeyError as ie:
+            except (IndexError,KeyError) as ie:
                 print("Index not found in dictionary!", ie)
                 break
             
@@ -89,7 +89,7 @@ class PaksDatabase:
         except Error as e:
             print("Error while connecting to MySQL", e)
             
-        except IndexError or KeyError as ie:
+        except (IndexError,KeyError) as ie:
             print("Index not found in dictionary!", ie)
 
     def selectFingerPrintsTable(self):
@@ -274,6 +274,11 @@ class PaksDatabase:
         result, effectedRows = self.Execute(updateCrimeStatusCommand)
         print("result: ",result,effectedRows)
 
+    def updateAbsentPeopleBulk(self):
+        # Bitiş tarihi dünden eski olan (süresi dolmuş) ve hala boş duran (imza atılmamış) kayıtları '0' (Gelmedi) yap
+        query = "UPDATE crime_check_times SET print_status = '0' WHERE print_status IS NULL AND date(end_time) < CURRENT_DATE()"
+        self.Execute(query)
+
     # def selectAbsentPeople(self):
     #     selectAbsentPeopleQuery = "SELECT * FROM crime_check_times WHERE print_status is null and date(end_time) < CURRENT_DATE()"
     #     result, effectedRows = self.Execute(selectAbsentPeopleQuery)
@@ -282,5 +287,26 @@ class PaksDatabase:
     # def updateAbsentPeople(self):
     #     updateAbsentPeopleQuery = "update crime_check_times set print_status = '0' where print_status is null and date(end_time) < CURRENT_DATE()"
     #     self.QueryList.append(updateAbsentPeopleQuery)
-    
 
+    def updatePassivePeopleBulk(self):
+        """
+        Pasif suçlara (status=0) ait süresi geçmiş ve imza atılmamış
+        kayıtları tek sorguda '5' (Pasif) olarak günceller.
+        """
+        # crime_check_times tablosunu crimes tablosu ile birleştiriyoruz (JOIN).
+        # Sadece suçu pasif (c.status = '0') olanları ve zamanı geçenleri seçiyoruz.
+        updateQuery = """
+        UPDATE crime_check_times cct
+        INNER JOIN crimes c ON cct.crime_id = c.id
+        SET cct.print_status = '5'
+        WHERE c.status = '0'
+          AND cct.print_status IS NULL
+          AND DATE(cct.end_time) < CURRENT_DATE()
+        """
+
+        # Sorguyu çalıştır
+        result, effectedRows = self.Execute(updateQuery)
+
+        # Etkilenen kayıt varsa loglara yazdırabiliriz (Opsiyonel)
+        if effectedRows > 0:
+            LOGGER.WriteLog(f"Toplam {effectedRows} adet pasif kayıt güncellendi.")

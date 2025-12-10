@@ -1,7 +1,5 @@
 import pygame
 
-
-
 successVoicePath = 'PAKS-SOUNDTRACK/Success.wav'
 errorVoicePath = 'PAKS-SOUNDTRACK/Error.wav'
 nextDayVoicePath = 'PAKS-SOUNDTRACK/NextDay.wav'
@@ -12,7 +10,6 @@ tcVoicePath = 'PAKS-SOUNDTRACK/nowTC.wav'
 tcErrorVoicePath = 'PAKS-SOUNDTRACK/errorTC.wav'
 tcUndefinedVoicePath = 'PAKS-SOUNDTRACK/undefinedTC.wav'
 nowFingerVoicePath = 'PAKS-SOUNDTRACK/nowFinger.wav'
-
 
 pygame.mixer.init(frequency=48750)
 soundSuccess = pygame.mixer.Sound(successVoicePath)
@@ -28,8 +25,11 @@ soundNextHour = pygame.mixer.Sound(nextHourVoicePath)
 
 
 def play_sound(sound):
+    # DÜZELTME: Üst üste binmeyi engellemek için önce mevcut sesi durdur
+    try:
+        if pygame.mixer.get_busy():
+            pygame.mixer.stop()
+    except Exception:
+        pass
+
     playing = sound.play()
-
-
-
-

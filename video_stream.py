@@ -1,149 +1,185 @@
 import tkinter as tk
-from tkinter import messagebox
 import cv2
 import datetime
 from PIL import Image, ImageTk
 import threading
 from Logger import LOGGER
-import sound_config
-import time  # get_camera_instance() içinde time.sleep kullanılıyor
+import time
+import numpy as np
 
-#resolution = (800, 480)
+# --- AYARLAR ---
 resolution = (320, 240)
-framerate = 30
-frame = None
+stream_timeout_seconds = 10
+
+# --- DEĞİŞKENLER ---
+# current_frame: Kameradan gelen ham (BGR) veri
+current_frame = None
+# display_frame: UI için hazırlanmış (RGB) ve döndürülmüş veri
+display_frame = None
+
+camera_running = False
+ui_update_active = False
+
+# Thread senkronizasyonu için kilit
+camera_lock = threading.Lock()
+
+# Parmak izi tarama bayrağı
 fingerprint_thread_active = False
-camera = None
-stream_timeout_seconds = 20
-first_call_begin = datetime.datetime.now()
-camera_lock = threading.Lock()  # Kamera erişimi için bir kilit
 
 
-def get_camera_instance():
-    global camera, camera_lock
-    with camera_lock:  # Kilitleyerek erişimi güvenli hale getir
-        retries = 5
-        attempt = 0
-        while attempt < retries:
-            if camera is None or not camera.isOpened():
-                camera = cv2.VideoCapture(0)
-                if camera.isOpened():
-                    return camera
-            attempt += 1
-            LOGGER.WriteLog(f"Kamera açılamadı, {attempt}. deneme...")
-            time.sleep(1)
-
-        return None
-
-
-def open_camera(root):
-    global first_call_begin, stream_timeout_seconds, camera, frame, fingerprint_thread_active
-    fingerprint_thread_active = True
-    first_call_begin = datetime.datetime.now()
-    # Kamerayı başlat
-    camera = get_camera_instance()  # cv2.VideoCapture(-1)  # 0, varsayılan kamera
-
-    if camera is None or not camera.isOpened():
-        print("Kamera açılamadı!")
+def start_camera_service():
+    """Kamerayı arka planda başlatır."""
+    global camera_running
+    if camera_running:
         return
 
-    camera_window = tk.Toplevel(root)
-    camera_window.attributes("-fullscreen", True)
-    camera_window.resizable(False, False)
-    camera_window.title("Kamera Görüntüsü")
-    # camera_window.geometry("800x480")
-    camera_window.geometry("1024x600")
-    # Ana çerçeve
-    main_frame = tk.Frame(camera_window)
-    main_frame.pack(fill=tk.BOTH, expand=True)
-    # Sol tarafta görüntü için bir çerçeve
-    video_frame = tk.Frame(main_frame, width=768, height=600)
-    # video_frame = tk.Frame(main_frame, width=600, height=480)
-    video_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+    camera_thread = threading.Thread(target=_camera_worker, daemon=True)
+    camera_thread.start()
 
-    video_label = tk.Label(video_frame)
-    video_label.pack(expand=True, fill=tk.BOTH)
 
-    # Sağ tarafta butonlar için bir çerçeve
-    button_frame = tk.Frame(main_frame, width=256, height=600, bg="lightgray")
-    # button_frame = tk.Frame(main_frame, width=200, height=480, bg="lightgray")
-    button_frame.pack(side=tk.RIGHT, fill=tk.BOTH, padx=0, pady=0)
-    button_frame.pack_propagate(False)
+def _camera_worker():
+    """Sürekli okuma yapan işçi thread."""
+    global current_frame, display_frame, camera_running
 
-    sound_config.play_sound(sound_config.soundNowFinger)
+    cap = cv2.VideoCapture(0)
 
-    def update_frame():
-        global camera_lock, first_call_begin, stream_timeout_seconds, frame, fingerprint_thread_active
-        camera_window.lift()
+    # Kamera açılana kadar dene
+    retry_count = 0
+    while not cap.isOpened():
+        time.sleep(1)
+        cap = cv2.VideoCapture(0)
+        retry_count += 1
+        if retry_count > 10:
+            LOGGER.WriteLog("Kamera donanımı başlatılamadı!")
+            return
+
+    camera_running = True
+    LOGGER.WriteLog("Kamera servisi başladı.")
+
+    while True:
         try:
-            if (datetime.datetime.now() - first_call_begin).total_seconds() > stream_timeout_seconds:
-                cancel()
-                return
-            if not fingerprint_thread_active:
-                cancel()
-                return
-
-            # --- KARE OKUMA & İŞLEME: LOKALDE YAP ---
-            with camera_lock:
-                ret, _raw = camera.read()
+            ret, frame = cap.read()
             if ret:
-                local_bgr = cv2.rotate(_raw, cv2.ROTATE_90_COUNTERCLOCKWISE)
-                cv2.putText(local_bgr,
+                # 1. Görüntüyü çevir (Dik ekran için)
+                rotated_frame = cv2.rotate(frame, cv2.ROTATE_90_COUNTERCLOCKWISE)
+
+                # 2. Üzerine tarih/saat yaz (BGR formatındayken)
+                cv2.putText(rotated_frame,
                             str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")),
                             (5, 20),
                             cv2.FONT_HERSHEY_SIMPLEX,
-                            0.5,
-                            (255, 255, 255),
-                            2,
-                            cv2.LINE_AA,
-                            False)
-                local_rgb = cv2.cvtColor(local_bgr, cv2.COLOR_BGR2RGB)
+                            0.5, (255, 255, 255), 2, cv2.LINE_AA, False)
 
-                # --- GLOBAL 'frame' ATAMASINI KİLİT ALTINDA VE KOPYA OLARAK YAP ---
+                # 3. UI için RGB'ye çevir (OpenCV BGR kullanır, Pillow RGB)
+                rgb_frame = cv2.cvtColor(rotated_frame, cv2.COLOR_BGR2RGB)
+
+                # 4. Global değişkenleri güncelle (KİLİT ALTINDA)
                 with camera_lock:
-                    # Diğer thread'lerin tutarlı bir kare görmesi için kopya ata
-                    frame = local_rgb.copy()
+                    current_frame = rotated_frame.copy()  # İşlemler için ham veri
+                    display_frame = rgb_frame  # UI için hazır veri
 
-                # Ekrana basılan görüntü, az önce ürettiğimiz lokal kopya
-                img = Image.fromarray(local_rgb)
-                imgtk = ImageTk.PhotoImage(img)
-                video_label.imgtk = imgtk
-                video_label.configure(image=imgtk)
+            else:
+                # Frame alınamazsa az bekle (CPU'yu yorma)
+                time.sleep(0.1)
 
-            video_label.after(1, update_frame)
         except Exception as e:
-            cancel()
-            print("hata oluştu: ", e)
+            LOGGER.WriteLog(f"Kamera hatası: {e}")
+            time.sleep(1)
+
+
+def open_camera_in_label(target_label):
+    """
+    Görüntüyü Label'a basar.
+    Thread-Safe ve Widget Varoluş Kontrollü Sürüm.
+    """
+    global ui_update_active, stream_timeout_seconds
+    ui_update_active = True
+    start_time = datetime.datetime.now()
+
+    def update_ui():
+        global ui_update_active
+
+        # 1. Döngü ve Widget Kontrolü
+        if not ui_update_active:
             return
 
-    def cancel():
-        global camera, camera_lock, fingerprint_thread_active
-        fingerprint_thread_active = False
+        try:
+            # Widget yoksa döngüyü kır
+            if not target_label.winfo_exists():
+                ui_update_active = False
+                return
+        except Exception:
+            ui_update_active = False
+            return
+
+        # 2. Zaman Aşımı Kontrolü
+        elapsed = (datetime.datetime.now() - start_time).total_seconds()
+        if elapsed > stream_timeout_seconds:
+            try:
+                # Timeout event'ini tetikle
+                if target_label.winfo_exists():
+                    target_label.event_generate("<<Timeout>>")
+            except Exception as e:
+                pass
+            ui_update_active = False
+            return
+
+        # 3. Veriyi Güvenli Kopyalama (Thread Safety için Kritik Nokta)
+        local_image_data = None
+
+        # Sadece kopyalama işlemi sırasında kilitliyoruz.
+        # Bu, UI thread'inin kamera thread'ini bloklamasını engeller.
+        if camera_running:
+            with camera_lock:
+                if display_frame is not None:
+                    # Derin kopya almaya gerek yok, numpy array kopyası yeterli
+                    local_image_data = display_frame.copy()
+
+        # 4. Görüntüyü UI'a Basma (Kilit dışı işlem)
+        if local_image_data is not None:
+            try:
+                # Pillow Image oluşturma işlemi biraz maliyetlidir, bunu kilit dışında yapıyoruz
+                img_pil = Image.fromarray(local_image_data)
+                imgtk = ImageTk.PhotoImage(image=img_pil)
+
+                # Sadece widget hala hayattaysa güncelle
+                if target_label.winfo_exists():
+                    target_label.configure(image=imgtk)
+                    # Çöp toplayıcı (GC) resmi silmesin diye referans tutuyoruz:
+                    target_label.image = imgtk
+            except Exception as e:
+                # Resim oluşturma sırasında hata olursa (örn: pencere kapanırsa) yoksay
+                pass
+
+        # 5. Bir sonraki kare için planlama (20ms = ~50 FPS)
+        if ui_update_active and target_label.winfo_exists():
+            target_label.after(20, update_ui)
+
+    # Döngüyü başlat
+    update_ui()
+
+
+def stop_ui_update():
+    global ui_update_active
+    ui_update_active = False
+
+
+# Eski kod uyumluluğu için (Snapshot vb. fonksiyonlar frame değişkenini kullanıyor olabilir)
+frame = None
+
+
+def update_legacy_frame_reference():
+    global frame, current_frame
+    while True:
         with camera_lock:
-            if camera is not None:
-                camera.release()
-                camera = None
-        camera_window.destroy()
-        root.destroy()  # Ana pencereyi kapat
-        root.root.deiconify()
-        root.root.lift()
+            if current_frame is not None:
+                try:
+                    # Buradaki frame değişkeni diğer modüllerde (snapshot) kullanılıyor
+                    frame = current_frame  # Zaten BGR formatında
+                except:
+                    pass
+        time.sleep(0.1)
 
-    update_frame()
-    cancel_button = tk.Button(
-        button_frame,
-        text="İptal",
-        font=("Arial", 16),
-        bg="#630e0e",
-        fg="white",
-        command=cancel
-    )
 
-    cancel_button.pack(expand=True, fill=tk.BOTH)  # Buton alt kısma yaslanır
-
-    def on_close():
-        with camera_lock:
-            if camera is not None:
-                camera.release()
-        camera_window.destroy()
-
-    camera_window.protocol("WM_DELETE_WINDOW", on_close)
+# Legacy desteğini başlat
+threading.Thread(target=update_legacy_frame_reference, daemon=True).start()

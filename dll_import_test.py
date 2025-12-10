@@ -1,7 +1,9 @@
+import pythonnet
+pythonnet.load("netfx")
 import clr
 import os
 import sys
-
+import time
 # Python dosyasının bulunduğu dizin
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -17,14 +19,20 @@ sys.path.append(base_dir)
 # Bio.TrustFinger.dll'i yükle
 clr.AddReference("Bio.TrustFinger")
 
-from Aratek.TrustFinger import TrustFingerManager
+from Aratek.TrustFinger import TrustFingerManager,TrustFingerDevice,LedStatus
 
 # SDK'yı başlat
 TrustFingerManager.GlobalInitialize()
 
 # Cihaz sayısını al
 dev_count = TrustFingerManager.GetDeviceCount()
+
+dev = TrustFingerDevice()
+dev.Open(0)
+
+dev.SetLedStatus(1, LedStatus.Off)
 print(f"Bağlı cihaz sayısı: {dev_count}")
+time.sleep(5)
 
 if dev_count > 0:
     dev = TrustFingerManager.GetDeviceDescription(0)

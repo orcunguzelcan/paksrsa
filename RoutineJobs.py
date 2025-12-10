@@ -215,7 +215,7 @@ class RoutineJobs:
                         for name in directories:
                             diffFromNow = int(datetime.now().timestamp()-(os.path.getmtime(root)))               
                             
-                            if diff_from_now > oneYear:
+                            if diffFromNow > oneYear:
                                 LOGGER.WriteLog("Removed:{}".format(os.path.join(root, name)))
                                 deleteList.append(os.path.join(root, name))                       
                 
@@ -235,18 +235,40 @@ class RoutineJobs:
         try:
                       
             LOGGER.WriteLog("Servisler yeniden başlatıldı.")      
-            os.system('sudo reboot')
+            os.system("shutdown /r /t 0")
 
         except Exception as e:
             LOGGER.WriteLog("Error: "+e)
-            
+
     def NTPSync(self):
+        """
+        Windows Time Service (w32time) kullanarak saati senkronize eder.
+        Yönetici (Admin) yetkisi gerektirir.
+        """
         try:
-            os.system(f'sudo ntpdate {self.ntpServer}')
-            LOGGER.WriteLog('NTP update successfull.')
-        
+            LOGGER.WriteLog(f"NTP senkronizasyonu başlatılıyor: {self.ntpServer}")
+
+            # 1. Windows Time servisini başlatmayı dene (Zaten açıksa hata vermez/yoksayılır)
+            # Servis kapalıysa w32tm /resync çalışmaz.
+            subprocess.run("net start w32time", shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+            # 2. NTP Sunucusunu Ayarla (Configuration)
+            # /update parametresi değişikliğin servise hemen bildirilmesini sağlar.
+            config_command = f'w32tm /config /manualpeerlist:"{self.ntpServer}" /syncfromflags:manual /update'
+            subprocess.run(config_command, shell=True, check=True)
+
+            # 3. Senkronizasyonu Zorla (Resync)
+            sync_command = "w32tm /resync"
+            subprocess.run(sync_command, shell=True, check=True)
+
+            LOGGER.WriteLog('NTP update successful.')
+
+        except subprocess.CalledProcessError as e:
+            # Komutlardan biri hata koduyla dönerse buraya düşer
+            LOGGER.WriteLog(f"NTP Sync Command Failed: {e}")
         except Exception as e:
-            LOGGER.WriteLog(f"Error: {e}")
+            # Genel Python hataları
+            LOGGER.WriteLog(f"NTP General Error: {e}")
             
     
     def checkUsage(self):
@@ -315,26 +337,18 @@ class RoutineJobs:
     #            fingerprint_check_lock.release()
     #    print("Skipped fp_module control due to the lock")
     #    return True
-            
-            
+
     def get_camera_health(self):
-        print("camera health check")
+        # YENİ YÖNTEM: Video stream modülündeki global değişkene bak
         try:
-            if video_stream.camera is None:                
-                video_stream.camera = video_stream.get_camera_instance()#cv2.VideoCapture(-1)                
-            if video_stream.camera is not None:
-                status, frame = video_stream.camera.read()
-                video_stream.camera.release()
-                video_stream.camera = None
-                return status
-            if not video_stream.fingerprint_thread_active:
-                status, frame = video_stream.camera.read()
-                video_stream.camera.release()
-                video_stream.camera = None
-                return status  
-            return True
+            # Eğer kamera thread'i çalışıyorsa ve güncel frame varsa kamera sağlamdır
+            if video_stream.camera_running and video_stream.current_frame is not None:
+                return True
+            else:
+                LOGGER.WriteLog("Kamera sağlık kontrolü: Frame alınamıyor veya kamera kapalı.")
+                return False
         except Exception as e:
-            LOGGER.WriteLog(f"Exception occured: {e}")
+            LOGGER.WriteLog(f"Kamera sağlık kontrolü hatası: {e}")
             return False
             
     def get_camera_health__(self):
@@ -391,13 +405,14 @@ class RoutineJobs:
         LOGGER.WriteLog("Kaçaklar işaretlendi (Eski Yöntem).")
 
     def checkPassive(self):
-        checkPersonResult = self.mDatabase.selectAllPersonResults()
-        for person in checkPersonResult:
-            checkCrimeId = self.mDatabase.selectAllPassiveCrimesForPerson(person[0])
-            for crimeId in checkCrimeId:
-                crimeCheckTimes = self.mDatabase.selectAbsentPeople(crimeId[0])
-                for crimeCheckTimeId in crimeCheckTimes:
-                    self.mDatabase.updatePassivePeople(crimeCheckTimeId[0])
+        try:
+            # Eski, yavaş ve iç içe döngülü yapı yerine;
+            # Veritabanında tek seferde çalışan bulk (toplu) güncelleme metodunu çağırıyoruz.
+            self.mDatabase.updatePassivePeopleBulk()
+            LOGGER.WriteLog("Pasif durum kontrolü tamamlandı.")
+
+        except Exception as e:
+            LOGGER.WriteLog(f"checkPassive hatası: {e}")
                     
     def runLaravelScheduler(self):
         """Laravel schedule:run komutu ile tüm zamanlanmış görevleri çalıştır"""
