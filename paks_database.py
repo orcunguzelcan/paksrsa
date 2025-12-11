@@ -131,7 +131,8 @@ class PaksDatabase:
                 "host": self.Server,
                 "user": self.Uid,
                 "password": self.Password,
-                "database": self.Database
+                "database": self.Database,
+                "use_pure": True
             }
             self.pool = mysql.connector.pooling.MySQLConnectionPool(
                 pool_name="paks_pool",
