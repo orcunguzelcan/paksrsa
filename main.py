@@ -7,6 +7,18 @@ import sys
 import video_stream
 import threading
 import user_process
+import paks_database
+
+try:
+    paks_database.initialize_database_if_needed()
+except Exception as e:
+    print("Veritabanı ilk kurulumda hata:", e)
+
+try:
+    video_stream.reset_camera_device()
+except Exception as e:
+    # Reset başarısız olsa bile uygulama devam etsin
+    print("Kamera reset denemesinde hata:", e)
 
 # --- 1. KAMERA SERVİSİNİ BAŞLAT ---
 video_stream.start_camera_service()
@@ -47,7 +59,7 @@ try:
     # Boyut: 40 Punto
     time_text = canvas.create_text(
         screen_width / 2,  # Yatayda Tam Orta
-        screen_height * 0.85,  # Dikeyde %85 aşağısı (Butonun altı)
+        screen_height * 0.90,  # Dikeyde %85 aşağısı (Butonun altı)
         text=datetime.now().strftime("%d-%m-%Y %H:%M:%S"),
         fill="#630e0e",
         font=("Helvetica", 50, "bold"),  # Font BÜYÜTÜLDÜ
@@ -60,7 +72,7 @@ except Exception as e:
 # --- 5. ORTA BUTON ---
 scan_button = tk.Button(
     root,
-    text="PARMAK İZİ\nOKUTUN",
+    text="PARMAK İZİNİZİ OKUTMAK İÇİN BUTONA BASINIZ",
     font=("Arial", 28, "bold"),
     bg="#630e0e",
     fg="white",
@@ -73,7 +85,7 @@ scan_button = tk.Button(
 )
 
 # Butonun Konumu (Ekranın %65 aşağısında)
-scan_button.place(relx=0.5, rely=0.65, anchor=tk.CENTER, width=500, height=200)
+scan_button.place(relx=0.5, rely=0.60, anchor=tk.CENTER, width=1000, height=200)
 
 
 # --- 6. SAAT GÜNCELLEME ---
@@ -89,9 +101,23 @@ def update_time():
 
 update_time()
 
+
+def on_root_close():
+    # Önce UI güncellemeyi durdur
+    video_stream.stop_ui_update()
+    # Sonra kamera servisini kapat
+    video_stream.stop_camera_service()
+    # En son tkinter penceresini kapat
+    root.destroy()
+    sys.exit(0)
+
+root.protocol("WM_DELETE_WINDOW", on_root_close)
+
 # --- 7. BAŞLAT ---
 try:
     root.mainloop()
 except KeyboardInterrupt:
     print("Çıkış yapılıyor...")
+    video_stream.stop_ui_update()
+    video_stream.stop_camera_service()
     sys.exit(-1)

@@ -36,7 +36,63 @@ class PaksEnrollServer(BaseHTTPRequestHandler):
         self.send_header("Content-type", content_type)
         self.end_headers()
 
+    def get_real_client_ip(self, body_json):
+        """
+        Gerçek IP adresini bulmaya çalışır.
+        Öncelik:
+        1. JSON Body içindeki 'device_ip' (İstemci kendini bildiriyorsa)
+        2. X-Forwarded-For (Proxy arkasındaysa)
+        3. self.client_address (Direkt bağlantı)
+        """
+        # 1. JSON Body kontrolü (Eğer istemci tarafında 'device_ip' gönderirseniz bu en kesin çözümdür)
+        if body_json and 'device_ip' in body_json:
+            return body_json['device_ip']
+
+        # 2. Proxy Header kontrolü
+        x_forwarded_for = self.headers.get('X-Forwarded-For')
+        if x_forwarded_for:
+            # Genellikle "client, proxy1, proxy2" şeklindedir, ilkini alırız
+            return x_forwarded_for.split(',')[0].strip()
+
+        x_real_ip = self.headers.get('X-Real-IP')
+        if x_real_ip:
+            return x_real_ip
+
+        # 3. Standart Socket IP
+        return self.client_address[0]
+
     def do_POST(self):
+
+        content_length = int(self.headers.get('Content-Length', 0))
+        post_data = self.rfile.read(content_length)
+        body = {}
+
+        try:
+            if post_data:
+                body = json.loads(post_data)
+        except json.JSONDecodeError:
+            print("JSON Decode Hatası")
+            # JSON bozuksa bile IP'yi header veya socketten almaya çalışarak devam edebiliriz
+            pass
+
+        # --- IP TESPİTİ ---
+        # Body parse edildiği için artık içeriden IP bakabiliriz
+        client_ip = self.get_real_client_ip(body)
+
+        # --- NTP Server tablosunu güncelle ---
+        try:
+            ntp_rec = database.get_ntpserver()
+
+            if ntp_rec and len(ntp_rec) > 0:
+                database.update_ntpserver(client_ip)
+            else:
+                database.insert_ntpserver(client_ip)
+
+            print(f"NTP Server IP güncellendi: {client_ip}")
+
+        except Exception as e:
+            print("NTP server tablo güncelleme hatası:", e)
+
         if self.path != '/enroll':
             self._set_headers(404)
             self.wfile.write(b'{"error": "Not found"}')

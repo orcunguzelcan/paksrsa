@@ -276,3 +276,110 @@ def find_finger_1_to_N(scan_window, root_main):
             except:
                 pass
             return
+            
+def find_finger(fingerprint_list, person_id_info, person_tckn_info):
+    global finger,imagePath,read_finger_per_crime_check_time,dev
+    fingerResult=None    
+    
+    while (dev is None or not is_device_open(dev)):        
+        dev = init_fingerprint_sensor()
+        
+    while video_stream.fingerprint_thread_active:
+        print("fp_thread_active")
+        with fingerprint_check_lock:
+            try:
+                print("before set_led")
+                set_led(dev,0,LedStatus.On)
+                print("after set_led")
+                bmp_data = dev.CaptureBitmapData(20)
+                while video_stream.fingerprint_thread_active and (bmp_data is None or bmp_data.FingerprintImageData is None):
+                    bmp_data = dev.CaptureBitmapData(20)
+                    if not video_stream.fingerprint_thread_active:
+                        return
+                    continue
+                fingerResult = dev.ExtractFeature(FingerPosition.UnKnow)                
+            except TrustFingerException as e:
+                LOGGER.WriteLog("Fingerprint Scan Error")
+                sound_config.play_sound(sound_config.soundError)
+                if e.HResult == -221:
+                    print("Henüz parmak yok, bekleniyor...")
+                else:
+                    print(f"Hata oluştu: {e}")
+                pass
+            finally:
+                set_led(dev, 0,LedStatus.Off)
+                
+            if fingerResult is None or fingerResult.FeatureData is None:
+                continue
+                
+            live_template = fingerResult.FeatureData            
+                
+            last_success_fingerprint_time = datetime.datetime.now()
+            isEffectedAnyRow=False
+            isFingerFound=False
+            video_stream.first_call_begin = datetime.datetime.now()
+            for i in range(len(fingerprint_list)):
+                tempInfo = fingerprint_list[i][1].replace("'", "")
+                tempInfo = System.Array[System.Byte](list(binascii.unhexlify(tempInfo)))
+                result = dev.Verify(3, live_template, tempInfo)  
+                if result.get_IsMatch():
+                    blacklistPersonResult = database.selectBlacklistPersonResult(person_id_info)
+                    isFingerFound=True
+                    
+                    if len(blacklistPersonResult) > 0:
+                        database.insertBlacklist(person_id_info)
+                        sound_config.play_sound(sound_config.soundAlarm)
+                    
+            crime_result = database.selectPersonCrimesTable(person_id_info)
+            
+            if isFingerFound and len(crime_result) > 0:
+                # SADECE ŞU ANIN SAAT ARALIĞINA DÜŞEN SLOT'LAR İÇİN İŞLEM YAP
+                for j in range(len(crime_result)):
+                    crime_check_time_result_id = database.selectIdFromPersonCrimeCheckTimesTable(crime_result[j][0])
+                    
+                    if len(crime_check_time_result_id) > 0:
+                        take_snapshot(person_tckn_info, video_stream.frame)
+                        effectedRows=database.updateCrimeCheckTimes(
+                            printStatus='1',
+                            imagePath=imagePath,
+                            crimeResult=crime_result[j][0],
+                            crime_check_time_id=crime_check_time_result_id[0][0]
+                        )
+                        if effectedRows>0:
+                            isEffectedAnyRow = True
+                            time.sleep(0.5)
+                            if read_finger_per_crime_check_time:
+                                break
+                            
+                # GÜNCELLENEN BLOK
+                if isEffectedAnyRow:
+                    sound_config.play_sound(sound_config.soundSuccess)
+                    video_stream.fingerprint_thread_active = False
+                    return
+                else:
+                    # O an için uygun slot yoksa: kontrol et, o güne ait ama henüz saati gelmemiş dosya var mı?
+                    now = datetime.datetime.now().time()
+                    has_future_slot = False
+                    for c in crime_result:
+                        try:
+                            start_time = c[2].time() if isinstance(c[2], datetime.datetime) else datetime.datetime.strptime(str(c[2]), "%H:%M:%S").time()
+                            if start_time > now:
+                                has_future_slot = True
+                                break
+                        except Exception:
+                            continue
+
+                    if has_future_slot:
+                        # Henüz zamanı gelmemiş başka dosya var → sonraki saat sesi
+                        sound_config.play_sound(sound_config.soundNextHour)
+                    else:
+                        # O güne ait başka dosya yok → ertesi gün sesi
+                        sound_config.play_sound(sound_config.soundNextday)
+
+                    video_stream.fingerprint_thread_active=False
+                    return                    
+                    
+                    
+            if not isFingerFound or not isEffectedAnyRow:
+                sound_config.play_sound(sound_config.soundError)
+            time.sleep(2)

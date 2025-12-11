@@ -244,33 +244,48 @@ class RoutineJobs:
         """
         Windows Time Service (w32time) kullanarak saati senkronize eder.
         Yönetici (Admin) yetkisi gerektirir.
+        IP'yi veritabanındaki ntpserver tablosundan okur.
+        Tablo boş ise senkronizasyonu pas geçer.
         """
         try:
-            LOGGER.WriteLog(f"NTP senkronizasyonu başlatılıyor: {self.ntpServer}")
+            # Veritabanından NTP server IP'sini çek
+            rows = self.mDatabase.get_ntpserver()
+            # rows None, [] veya ip alanı boş ise
+            if not rows or not rows[0] or not rows[0][0]:
+                LOGGER.WriteLog("NTP senkronizasyonu atlandı: ntpserver tablosunda geçerli bir IP kaydı yok.")
+                return
 
-            # 1. Windows Time servisini başlatmayı dene (Zaten açıksa hata vermez/yoksayılır)
-            # Servis kapalıysa w32tm /resync çalışmaz.
-            subprocess.run("net start w32time", shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            # İlk satırdaki ip kolonu
+            self.ntpServer = rows[0][0]
 
-            # 2. NTP Sunucusunu Ayarla (Configuration)
-            # /update parametresi değişikliğin servise hemen bildirilmesini sağlar.
-            config_command = f'w32tm /config /manualpeerlist:"{self.ntpServer}" /syncfromflags:manual /update'
+            LOGGER.WriteLog(f"NTP senkronizasyonu başlatılıyor (DB): {self.ntpServer}")
+
+            # 1. Windows Time servisini başlatmayı dene
+            subprocess.run(
+                "net start w32time",
+                shell=True,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL
+            )
+
+            # 2. NTP Sunucusunu ayarla
+            config_command = (
+                f'w32tm /config /manualpeerlist:"{self.ntpServer}" '
+                f'/syncfromflags:manual /update'
+            )
             subprocess.run(config_command, shell=True, check=True)
 
-            # 3. Senkronizasyonu Zorla (Resync)
+            # 3. Senkronizasyonu zorla
             sync_command = "w32tm /resync"
             subprocess.run(sync_command, shell=True, check=True)
 
-            LOGGER.WriteLog('NTP update successful.')
+            LOGGER.WriteLog("NTP update successful.")
 
         except subprocess.CalledProcessError as e:
-            # Komutlardan biri hata koduyla dönerse buraya düşer
             LOGGER.WriteLog(f"NTP Sync Command Failed: {e}")
         except Exception as e:
-            # Genel Python hataları
             LOGGER.WriteLog(f"NTP General Error: {e}")
-            
-    
+
     def checkUsage(self):
         # RAM kullanımı
         ram = psutil.virtual_memory()

@@ -1,7 +1,7 @@
 import os
 
 
-def read_db_config(config_path="db_config.txt"):
+def read_db_config(config_path="config.txt"):
     if not os.path.exists(config_path):
         raise FileNotFoundError(f"DB config dosyası bulunamadı: {config_path}")
 
