@@ -63,36 +63,6 @@ class PaksEnrollServer(BaseHTTPRequestHandler):
 
     def do_POST(self):
 
-        content_length = int(self.headers.get('Content-Length', 0))
-        post_data = self.rfile.read(content_length)
-        body = {}
-
-        try:
-            if post_data:
-                body = json.loads(post_data)
-        except json.JSONDecodeError:
-            print("JSON Decode Hatası")
-            # JSON bozuksa bile IP'yi header veya socketten almaya çalışarak devam edebiliriz
-            pass
-
-        # --- IP TESPİTİ ---
-        # Body parse edildiği için artık içeriden IP bakabiliriz
-        client_ip = self.get_real_client_ip(body)
-
-        # --- NTP Server tablosunu güncelle ---
-        try:
-            ntp_rec = database.get_ntpserver()
-
-            if ntp_rec and len(ntp_rec) > 0:
-                database.update_ntpserver(client_ip)
-            else:
-                database.insert_ntpserver(client_ip)
-
-            print(f"NTP Server IP güncellendi: {client_ip}")
-
-        except Exception as e:
-            print("NTP server tablo güncelleme hatası:", e)
-
         if self.path != '/enroll':
             self._set_headers(404)
             self.wfile.write(b'{"error": "Not found"}')

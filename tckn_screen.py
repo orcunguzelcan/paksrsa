@@ -113,7 +113,6 @@ def start_scan_process(root_main):
 
     # Eğer animasyon varsa ve bellekte yoksa yükle
     if animation_path:
-        # Thread içinde yükleyelim ki arayüz donmasın (video kısaysa main thread de olur)
         threading.Thread(target=load_animation_to_memory, args=(animation_path, TARGET_W, TARGET_H),
                          daemon=True).start()
 
@@ -156,15 +155,17 @@ def start_scan_process(root_main):
 
     # --- KAPATMA FONKSİYONU ---
     def on_close(event=None):
-        LOGGER.WriteLog("Tarama ekranı kapatılıyor.")
+        LOGGER.WriteLog("Tarama ekranı kapatılıyor (Timeout veya Manuel).")
 
-        # 1. Thread durdurma işareti
+        # 1. Thread durdurma işareti ver (Sensör thread'i bunu görünce kendisi kapanacak)
         video_stream.fingerprint_thread_active = False
 
-        # 2. Sensörü manuel iptal (Ek güvenlik)
-        fpconfig.cancel_scanning()
+        # DÜZELTME: fpconfig.cancel_scanning() KALDIRILDI.
+        # Bu fonksiyon UI thread'inde çalışırken, sensör thread'i capture modundaysa
+        # sürücü kilitleniyor (deadlock) ve UI donuyordu.
+        # Artık UI, sensörü beklemeden hemen kapanacak.
 
-        # 3. UI güncellemesini durdur
+        # 2. UI güncellemesini durdur
         video_stream.stop_ui_update()
 
         root_main.deiconify()
@@ -178,10 +179,7 @@ def start_scan_process(root_main):
             pass
 
     # --- DONANIMLARI BAŞLAT ---
-    # Kamera
     threading.Thread(target=video_stream.open_camera_in_label, args=(video_label,)).start()
-
-    # Animasyon (RAM'den okuyacak)
     update_animation()
 
     # Timeout Dinleyicisi
@@ -189,7 +187,6 @@ def start_scan_process(root_main):
 
     time.sleep(0.5)
 
-    # Parmak izi thread'i
     fp_thread = threading.Thread(target=fpconfig.find_finger_1_to_N, args=(scan_window, root_main))
     fp_thread.start()
 

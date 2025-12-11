@@ -2,3 +2,4 @@ Server=localhost
 Uid=trader
 Password=qw34qw34
 Database=detectordb
+RemoteHost=192.168.1.113

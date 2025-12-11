@@ -550,19 +550,6 @@ class PaksDatabase:
         if effectedRows > 0:
             LOGGER.WriteLog(f"Toplam {effectedRows} adet pasif kayıt güncellendi.")
 
-    def get_ntpserver(self):
-        query = "SELECT ip FROM ntpserver LIMIT 1"
-        result, rows = self.Execute(query)
-        return result
-
-    def insert_ntpserver(self, ip):
-        query = f"INSERT INTO ntpserver(ip) VALUES('{ip}')"
-        self.QueryList.append(query)
-
-    def update_ntpserver(self, ip):
-        query = f"UPDATE ntpserver SET ip='{ip}'"
-        self.QueryList.append(query)
-
     def updateAbsentPeopleBulk(self):
         query = """
             UPDATE crime_check_times cct

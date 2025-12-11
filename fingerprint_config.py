@@ -15,7 +15,7 @@ import threading
 from Logger import LOGGER
 import clr
 import sys
-import atexit  # --- EKLENDİ: Çıkış temizliği için ---
+import atexit
 
 # --- AYARLAR ---
 base_dir = os.path.dirname(os.path.abspath(__file__))
@@ -40,22 +40,16 @@ imagePath = str()
 dev = None
 
 
-# --- YENİ EKLENEN: GÜVENLİ KAPATMA VE TEMİZLİK ---
+# --- GÜVENLİ KAPATMA ---
 def release_device():
-    """
-    Cihazı güvenli bir şekilde kapatır ve kaynağı serbest bırakır.
-    Hem finally bloklarında hem de program çıkışında çağrılır.
-    """
+    """Program kapanırken çalışır."""
     global dev
     try:
         if dev is not None:
-            # Işığı kapatmayı dene
             try:
                 dev.SetLedStatus(0, LedStatus.Off)
             except:
                 pass
-
-            # Cihazı kapat
             if dev.IsOpen:
                 dev.Close()
                 LOGGER.WriteLog("Parmak izi sensörü donanım olarak serbest bırakıldı.")
@@ -65,19 +59,14 @@ def release_device():
         dev = None
 
 
-# Program aniden kapansa bile sensörü serbest bırakmayı dene
 atexit.register(release_device)
 
-
-# -----------------------------------------------------
 
 def init_fingerprint_sensor():
     global dev
     try:
-        # Eğer zaten açıksa tekrar açmaya çalışma, mevcut olanı döndür
         if dev is not None and dev.IsOpen:
             return dev
-
         TrustFingerManager.GlobalInitialize()
         new_dev = TrustFingerDevice()
         new_dev.Open(0)
@@ -85,7 +74,6 @@ def init_fingerprint_sensor():
         return new_dev
     except Exception as e:
         LOGGER.WriteLog("Sensor Init Error: " + str(e))
-        # Hata durumunda nesneyi temizle
         release_device()
         return None
 
@@ -105,19 +93,17 @@ def is_device_open(device) -> bool:
         return False
 
 
+# --- DÜZELTİLDİ: UI'DAN ASLA BLOCKING ÇAĞRI YAPMA ---
 def cancel_scanning():
-    global dev
+    """
+    Sadece log yazar ve bayrağı indirir.
+    Donanıma komut göndermez çünkü deadlock riski vardır.
+    """
     video_stream.fingerprint_thread_active = False
-    LOGGER.WriteLog("Tarama iptal edildi, LED kapatılıyor...")
-    if dev:
-        try:
-            dev.SetLedStatus(0, LedStatus.Off)
-        except:
-            pass
+    LOGGER.WriteLog("Tarama iptal isteği alındı (Donanım arka planda kapanacak).")
 
 
 def snapshot_effect(frame):
-    # ... (Orijinal kod aynı kalacak) ...
     whiteFrame = 255 * np.ones((480, 800, 3), np.uint8)
     try:
         cv2.namedWindow("window", cv2.WINDOW_NORMAL)
@@ -133,7 +119,6 @@ def snapshot_effect(frame):
 
 
 def take_snapshot(uID, frame):
-    # ... (Orijinal kod aynı kalacak) ...
     global imagePath
     timeStamp = datetime.datetime.now()
     cameraPath = os.path.join('Photos', str(uID), str(timeStamp.year), str(timeStamp.month), str(timeStamp.day))
@@ -162,7 +147,6 @@ def take_snapshot(uID, frame):
 def find_finger_1_to_N(scan_window, root_main):
     global finger, imagePath, read_finger_per_crime_check_time, dev
 
-    # --- TRY BLOK BAŞLANGICI: Sensörün kilitli kalmaması için ---
     try:
         retry_count = 0
         while (dev is None or not is_device_open(dev)):
@@ -180,15 +164,19 @@ def find_finger_1_to_N(scan_window, root_main):
 
             with fingerprint_check_lock:
                 try:
+                    # Döngü başında kontrol
                     if not video_stream.fingerprint_thread_active:
-                        set_led(dev, 0, LedStatus.Off)
-                        break  # break kullanarak finally bloğuna git
+                        break
 
                     set_led(dev, 0, LedStatus.On)
+
+                    # Bu fonksiyon bloklayabilir. Ancak UI artık bunu beklemiyor.
+                    # Eğer çok uzun sürerse UI kapanır, bu thread arkada devam eder,
+                    # bitince finally bloğuna düşer ve ışığı kapatır.
                     bmp_data = dev.CaptureBitmapData(20)
 
+                    # Capture sonrası kontrol
                     if not video_stream.fingerprint_thread_active:
-                        set_led(dev, 0, LedStatus.Off)
                         break
 
                     if bmp_data is None or bmp_data.FingerprintImageData is None:
@@ -198,7 +186,8 @@ def find_finger_1_to_N(scan_window, root_main):
                 except Exception:
                     pass
                 finally:
-                    # Döngü içinde LED'i kapat (bir sonraki turda tekrar açılacak)
+                    # Döngü içindeyken her turda ışığı kapatıp açma mantığı
+                    # Eğer döngüden çıkılıyorsa en dıştaki finally kapatacak
                     set_led(dev, 0, LedStatus.Off)
 
             if not video_stream.fingerprint_thread_active:
@@ -215,9 +204,9 @@ def find_finger_1_to_N(scan_window, root_main):
                         root_main.deiconify()
                     except:
                         pass
-                break  # Döngüden çık
+                break
 
-            # --- Veritabanı Kontrolü (Orijinal Mantık) ---
+            # --- Veritabanı Kontrolü ---
             live_template = fingerResult.FeatureData
             all_fingerprints = database.selectFingerPrintsTable()
 
@@ -245,7 +234,6 @@ def find_finger_1_to_N(scan_window, root_main):
             if not video_stream.fingerprint_thread_active: break
 
             if isFingerFound:
-                # ... (Orijinal İşlemler: Blacklist, Suç Kaydı vs.) ...
                 if len(database.selectBlacklistPersonResult(matched_person_id)) > 0:
                     database.insertBlacklist(matched_person_id)
                     sound_config.play_sound(sound_config.soundAlarm)
@@ -279,7 +267,7 @@ def find_finger_1_to_N(scan_window, root_main):
                     root_main.deiconify()
                 except:
                     pass
-                break  # Döngüden çık
+                break
 
             else:
                 LOGGER.WriteLog("Eşleşme yok.")
@@ -291,9 +279,10 @@ def find_finger_1_to_N(scan_window, root_main):
                     root_main.deiconify()
                 except:
                     pass
-                break  # Döngüden çık
+                break
 
     finally:
-        # --- KRİTİK: Ne olursa olsun çıkışta sensörü kapat ---
+        # --- THREAD BİTERKEN IŞIK KESİN KAPANACAK ---
+        # UI bunu beklemez, arka planda sessizce gerçekleşir.
         LOGGER.WriteLog("Tarama döngüsü bitti, sensör kapatılıyor...")
         release_device()
