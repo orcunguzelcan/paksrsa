@@ -2,7 +2,7 @@ import threading
 import time
 
 import mysql.connector
-from mysql.connector import Error
+from mysql.connector import Error, pooling  # pooling eklendi
 
 from Logger import LOGGER
 
@@ -10,15 +10,11 @@ import os
 import database_config as dbconfig
 
 
-
 def initialize_database_if_needed():
     """
     Veritabanı ve temel tabloları kontrol eder.
     Yoksa full.sql dosyasını çalıştırarak oluşturur.
-    Bu fonksiyon idempotent olacak şekilde tasarlanmıştır,
-    birden çok kez çağrılsa da zarar vermez.
     """
-
     # 1) Önce belirtilen veritabanında örnek bir tabloyu arıyoruz
     try:
         conn = mysql.connector.connect(
@@ -34,11 +30,9 @@ def initialize_database_if_needed():
         conn.close()
 
         if result is not None:
-            # people tablosu varsa şemanın kurulmuş olduğunu varsayıyoruz
             print("Veritabanı ve tablolar zaten mevcut, full.sql çalıştırılmadı.")
             return
     except Error as e:
-        # Örneğin: 1049 Unknown database 'detectordb' vb.
         print("Veritabanı kontrolünde hata veya veritabanı yok:", e)
 
     # 2) Buraya geldiysek, ya veritabanı yok ya da kritik tablo eksik.
@@ -52,7 +46,6 @@ def initialize_database_if_needed():
         return
 
     try:
-        # Veritabanı ismi olmadan bağlanıyoruz (CREATE DATABASE için)
         conn = mysql.connector.connect(
             host=dbconfig.Server,
             user=dbconfig.Uid,
@@ -63,7 +56,6 @@ def initialize_database_if_needed():
         with open(full_sql_path, "r", encoding="utf-8") as f:
             sql_script = f.read()
 
-        # --- multi=True kullanmadan scripti parçalayalım ---
         statements = []
         statement = ""
         in_single_quote = False
@@ -85,14 +77,12 @@ def initialize_database_if_needed():
         if statement.strip():
             statements.append(statement.strip())
 
-        # --- Her statement içindeki yorum satırlarını temizle ---
         cleaned_statements = []
         for stmt in statements:
             lines = stmt.splitlines()
             new_lines = []
             for line in lines:
                 stripped_line = line.lstrip()
-                # "--" ile başlayan satırlar sadece yorum, at
                 if stripped_line.startswith("--"):
                     continue
                 if stripped_line == "":
@@ -105,15 +95,12 @@ def initialize_database_if_needed():
             cleaned_stmt = "\n".join(new_lines)
             cleaned_statements.append(cleaned_stmt)
 
-        # --- Temizlenmiş statement'ları sırayla çalıştır ---
         for stmt in cleaned_statements:
             try:
                 cursor.execute(stmt)
             except Error as e:
-                # Bazı SET / /*!40101 ... */ komutları versiyon farkından dolayı hata verebilir.
                 print("SQL komutu çalıştırılırken hata:", e)
                 print("Problemli komut (kısaltılmış):", stmt[:120].replace("\n", " "))
-                # Kritik görmüyorsak devam et
                 continue
 
         conn.commit()
@@ -126,8 +113,6 @@ def initialize_database_if_needed():
         print("full.sql çalıştırılırken genel hata oluştu:", e)
 
 
-#### HEALTHS SORGULARI EN SON YAPILACAK!!!
-
 class PaksDatabase:
 
     def __init__(self, Server, Uid, Password, Database):
@@ -137,79 +122,136 @@ class PaksDatabase:
         self.Database = Database
         self.QueryList = list()
         self.QueryListMutex = threading.Lock()
+
+        # --- CONNECTION POOL OLUŞTURMA ---
+        # Pool size 5-10 arası genelde kiosk sistemleri için yeterlidir.
+        # Pool name unique olmalıdır.
+        try:
+            db_config = {
+                "host": self.Server,
+                "user": self.Uid,
+                "password": self.Password,
+                "database": self.Database
+            }
+            self.pool = mysql.connector.pooling.MySQLConnectionPool(
+                pool_name="paks_pool",
+                pool_size=5,
+                pool_reset_session=True,
+                **db_config
+            )
+            LOGGER.WriteLog("PaksDatabase Connection Pool initialized")
+        except Error as e:
+            LOGGER.WriteLog(f"Error initializing connection pool: {e}")
+            raise e
+
         self.ProcessThread = threading.Thread(target=self.Process)
         self.ProcessThread.start()
         LOGGER.WriteLog("PaksDatabase initialized")
 
     def dbConnect(self):
-        cnx = mysql.connector.connect(host=self.Server, user=self.Uid, password=self.Password, database=self.Database)
-        return cnx
+        """
+        Havuzdan bir bağlantı nesnesi döndürür.
+        """
+        try:
+            cnx = self.pool.get_connection()
+            return cnx
+        except Error as e:
+            LOGGER.WriteLog(f"Error getting connection from pool: {e}")
+            raise e
 
     def Process(self):
         while True:
+            conn = None
             try:
                 tempQuery = ""
                 with self.QueryListMutex:
                     if len(self.QueryList) > 0:
                         tempQuery = self.QueryList.pop()
-                        conn = self.dbConnect()
-                        if len(tempQuery) > 0:
-                            if not conn.is_connected():
-                                conn = self.dbConnect()
 
-                            myCursor = conn.cursor()
+                # Eğer sorgu varsa havuzdan bağlantı alıp işletelim
+                if len(tempQuery) > 0:
+                    conn = self.dbConnect()
+                    if not conn.is_connected():
+                        # Çok nadir durumda pool'dan gelen kopuksa tekrar dene
+                        conn.reconnect(attempts=3, delay=1)
 
-                            myCursor.execute(tempQuery)
-                            effectedRowCount = myCursor.rowcount
-                            result = []
-                            if not tempQuery.split(" ")[0].lower() == "select":
-                                conn.commit()
+                    myCursor = conn.cursor()
+                    myCursor.execute(tempQuery)
 
-                            if tempQuery.split(" ")[0].lower() == "select":
-                                result = myCursor.fetchall()
-                        else:
-                            if conn.is_connected():
-                                conn.close()
+                    # Process genellikle INSERT/UPDATE işlemleri için kullanılıyor
+                    if not tempQuery.split(" ")[0].lower() == "select":
+                        conn.commit()
 
-                time.sleep(0.5)
+                    # Cursor kapat
+                    myCursor.close()
+
+                time.sleep(0.1)  # Döngüyü çok az rahatlat (0.5 sn çok uzun olabilir, 0.1'e çektim)
 
             except Error as e:
-                print("Error while connecting to MySQL", e)
-                break
+                LOGGER.WriteLog(f"Process Loop SQL Error: {e}")
+                time.sleep(2)  # Hata durumunda bekleme süresi
+                continue
             except (IndexError, KeyError) as ie:
                 print("Index not found in dictionary!", ie)
                 break
+            except Exception as e:
+                LOGGER.WriteLog(f"Process Loop General Error: {e}")
+            finally:
+                # Bağlantıyı havuza iade et (Kritik!)
+                if conn is not None and conn.is_connected():
+                    conn.close()
 
     def Execute(self, tempQuery):
+        conn = None
+        myCursor = None
         try:
             conn = self.dbConnect()
             if not conn.is_connected():
-                conn = self.dbConnect()
+                conn.reconnect(attempts=3, delay=1)
 
-            LOGGER.WriteLog("PaksDatabase Db Connected")
+            # Log yoğunluğunu azaltmak için her bağlantıda log yazmayı kapatabiliriz
+            # ama orijinal akışı bozmamak için bırakıyorum.
+            # LOGGER.WriteLog("PaksDatabase Db Connected (Pool)")
+
             myCursor = conn.cursor()
-
             myCursor.execute(tempQuery)
-            LOGGER.WriteLog(f"PaksDatabase {tempQuery} executed")
+
+            LOGGER.WriteLog(
+                f"PaksDatabase {tempQuery[:100]}... executed")  # Query çok uzunsa logu şişirmesin diye kısalttım
             effectedRowCount = myCursor.rowcount
 
             result = []
-            if not tempQuery.split(" ")[0].lower() == "select":
+            command_type = tempQuery.split(" ")[0].lower()
+
+            if command_type != "select":
                 conn.commit()
 
-            if tempQuery.split(" ")[0].lower() == "select":
+            if command_type == "select":
                 result = myCursor.fetchall()
 
-            conn.close()
-            LOGGER.WriteLog("PaksDatabase Db Connection Closed..")
             return result, effectedRowCount
 
-
         except Error as e:
-            print("Error while connecting to MySQL", e)
+            print("Error while connecting or executing MySQL", e)
+            LOGGER.WriteLog(f"Execute Error: {e}")
+            return [], 0  # Hata durumunda boş dönmeli ki program çökmesin
 
         except (IndexError, KeyError) as ie:
             print("Index not found in dictionary!", ie)
+            return [], 0
+
+        finally:
+            # İşlem bitince veya hata çıkınca cursor ve bağlantıyı temizle/havuza at
+            if myCursor is not None:
+                try:
+                    myCursor.close()
+                except:
+                    pass
+            if conn is not None and conn.is_connected():
+                conn.close()  # Havuza iade eder
+            # LOGGER.WriteLog("PaksDatabase Db Connection Returned to Pool..")
+
+    # --- Diğer Fonksiyonlar (Mantıkları Değiştirilmedi) ---
 
     def selectFingerPrintsTable(self):
         selectInfoQuery = "SELECT * FROM finger_prints"
@@ -225,11 +267,13 @@ class PaksDatabase:
         selectInfoQuery = "SELECT info FROM finger_prints"
         result, effectedRows = self.Execute(selectInfoQuery)
         return result
-        
+
     def selectTCNo(self, personResulInt):
         selectTCNoQuery = f"SELECT tc_no FROM people WHERE id='{str(personResulInt)}'"
         result, effectedRows = self.Execute(selectTCNoQuery)
-        return result[0][0]
+        if result and len(result) > 0:
+            return result[0][0]
+        return None
 
     def selectBlackListTable(self):
         selectBlacklistPersonResultQuery = f"SELECT * FROM black_lists where deleted_at is null"
@@ -237,17 +281,12 @@ class PaksDatabase:
         return result
 
     def selectPersonCrimeCheckTimesTable(self, crime_id):
-        selectCrimeCheckTimesResultQuery = f"SELECT * FROM crime_check_times where print_status is NULL and crime_id ="+str(crime_id)+" and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL"
+        selectCrimeCheckTimesResultQuery = f"SELECT * FROM crime_check_times where print_status is NULL and crime_id =" + str(
+            crime_id) + " and start_time<=NOW() and end_time>=NOW() and deleted_at is NULL"
         result, effectedRows = self.Execute(selectCrimeCheckTimesResultQuery)
         return result
 
     def _normalize_image_path(self, imagePath):
-        """
-        DB'ye yazılacak fotoğraf yolunu güvenli ve tutarlı hale getir:
-        - None/boş ise None döndürür (NULL yazacağız).
-        - Windows '\\' yerine '/' kullanır.
-        - Tek tırnakları SQL için çiftler (escape).
-        """
         if imagePath is None:
             return None
         p = str(imagePath).strip()
@@ -256,7 +295,7 @@ class PaksDatabase:
         p = p.replace("\\", "/")
         p = p.replace("'", "''")
         return p
-        
+
     def selectCrimeResult(self, personResultInt):
         selectCrimeResultQuery = f"SELECT crimes.id FROM crimes WHERE status = '1' AND person_id = '{str(personResultInt)}' AND deleted_at is null"
         result, effectedRows = self.Execute(selectCrimeResultQuery)
@@ -266,23 +305,26 @@ class PaksDatabase:
         selectCrimeCheckTimesResultQuery = f"SELECT * FROM crime_check_times where deleted_at is NULL"
         result, effectedRows = self.Execute(selectCrimeCheckTimesResultQuery)
         return result
- 
+
     def selectPersonCrimesTable(self, person_id):
-        selectCrimesQuery = f"SELECT * FROM crimes where person_id="+str(person_id)+" and status=1 and deleted_at is null"
+        selectCrimesQuery = f"SELECT * FROM crimes where person_id=" + str(
+            person_id) + " and status=1 and deleted_at is null"
         result, effectedRows = self.Execute(selectCrimesQuery)
-        return result 
- 
+        return result
+
     def selectPersonIdResult(self, index):
         selectPersonIdResultQuery = "SELECT person_id FROM finger_prints where id= " + str(index)
         result, effectedRows = self.Execute(selectPersonIdResultQuery)
         return result
-        
+
     def selectPersonId(self, fingerId):
         selectPersonIdQuery = f"SELECT person_id FROM finger_prints WHERE id='{str(fingerId)}'"
         result, effectedRows = self.Execute(selectPersonIdQuery)
-        if (len(result)>0):
+        if result and len(result) > 0:
             resultInt = result[0][0]
             return resultInt
+        return None
+
     def selectPersonIdAndInfo(self):
         selectPersonIdAndInfoQuery = "SELECT distinct(person_id) FROM finger_prints where info is not null"
         result, effectedRows = self.Execute(selectPersonIdAndInfoQuery)
@@ -355,8 +397,7 @@ class PaksDatabase:
         result, effectedRows = self.Execute(selectCrimeCheckTimesResultDayQuery)
         return result
 
-    def updateCrimeCheckTimes(self, printStatus, imagePath, crimeResult, crime_check_time_id = None):
-        # Fotoğraf yolu güvenli/normalize
+    def updateCrimeCheckTimes(self, printStatus, imagePath, crimeResult, crime_check_time_id=None):
         norm_path = self._normalize_image_path(imagePath)
 
         if printStatus == '1':
@@ -374,7 +415,7 @@ class PaksDatabase:
                     f"WHERE crime_id = '{str(crimeResult)}' "
                     f"AND print_status IS NULL AND start_time<=NOW() AND end_time>=NOW()"
                 )
-        
+
         if printStatus == '3':
             if norm_path is not None:
                 updateCrimeCheckTimesQuery = (
@@ -392,19 +433,18 @@ class PaksDatabase:
                     f"AND print_status IS NULL "
                     f"AND (date(start_time)=CURRENT_DATE() OR date(end_time)=CURRENT_DATE())"
                 )
-        
+
         if crime_check_time_id is not None:
-            updateCrimeCheckTimesQuery += " and id=" + str(crime_check_time_id)            
-        
+            updateCrimeCheckTimesQuery += " and id=" + str(crime_check_time_id)
+
         result, effectedRows = self.Execute(updateCrimeCheckTimesQuery)
-        print("result: ",result,effectedRows)
-        return effectedRows    
+        print("result: ", result, effectedRows)
+        return effectedRows
 
     def insert_person(self, full_name, tc_no):
-        # SQL güvenliği için tek tırnak kaçışı
         full_name = full_name.replace("'", "''")
         tc_no = tc_no.replace("'", "''")
-        
+
         insert_query = (
             "INSERT INTO people (full_name, tc_no, created_at, updated_at) "
             f"VALUES ('{full_name}', '{tc_no}', NOW(), NOW())"
@@ -417,11 +457,9 @@ class PaksDatabase:
         selectAllPersonResultsQuery = "SELECT id FROM people WHERE deleted_at is null"
         result, effectedRows = self.Execute(selectAllPersonResultsQuery)
         return result
-       
-    def insert_person_fingerprint(self, person_id, info):
-        # Tek tırnaklara dikkat et, info içinde varsa kaçmak lazım
-        info = info.replace("'", "''")  # SQL'de tek tırnak kaçışı
 
+    def insert_person_fingerprint(self, person_id, info):
+        info = info.replace("'", "''")
         insert_query = (
             "INSERT INTO finger_prints (person_id, info, status, created_at, updated_at) "
             f"VALUES ({person_id}, '{info}', 1, NOW(), NOW())"
@@ -454,9 +492,6 @@ class PaksDatabase:
         self.QueryList.append(cameraStatusQuery)
 
     def getAbsentPeople(self):
-        # p.name, p.surname -> p.full_name
-        # p.phone -> KALDIRILDI (SQL'de yok)
-        # c.desc -> c.name
         selectAbsentPeopleQuery = f"select p.full_name, p.tc_no, c.name from crime_check_times cct" \
                                   f" inner join crimes c on cct.crime_id=c.id" \
                                   f" inner join people p on p.id=c.person_id" \
@@ -477,10 +512,10 @@ class PaksDatabase:
         return result
 
     def selectAbsentPeople(self, crimeId):
-        selectAbsentPeopleQuery = f"SELECT id FROM crime_check_times where deleted_at is null and crime_id = {crimeId} and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1" #
+        selectAbsentPeopleQuery = f"SELECT id FROM crime_check_times where deleted_at is null and crime_id = {crimeId} and print_status is null and date(end_time) < CURRENT_DATE() LIMIT 1"  #
         result, effectedRows = self.Execute(selectAbsentPeopleQuery)
         return result
-       
+
     def updateAbsentPeople(self, crimeChecktimeId):
         updateAbsentPeopleQuery = f"update crime_check_times set print_status = '0' where id = {crimeChecktimeId} and print_status is null and date(end_time) < CURRENT_DATE()"
         self.QueryList.append(updateAbsentPeopleQuery)
@@ -490,16 +525,10 @@ class PaksDatabase:
         self.QueryList.append(updatePassivePeopleQuery)
 
     def updateCrimeStatus(self):
-        updateCrimeStatusQuery= f"update crimes set status=0 where date(end_time) < CURRENT_DATE()"
+        updateCrimeStatusQuery = f"update crimes set status=0 where date(end_time) < CURRENT_DATE()"
         self.QueryList.append(updateCrimeStatusQuery)
-       
-    def updateExpiredCrimesAndPrintStatus(self):
-        """
-        1) Süresi dolan suçları (crimes.status = 1 ve end_time < CURRENT_DATE()) pasife çeker (status = 0)
-        2) Buna bağlı crime_check_times kayıtlarında print_status NULL ise 5'e günceller.
-        """
 
-        # 1) Süresi dolan suçları pasife çek
+    def updateExpiredCrimesAndPrintStatus(self):
         updateCrimesQuery = """
         UPDATE crimes
         SET status = '0'
@@ -508,19 +537,6 @@ class PaksDatabase:
         """
         self.Execute(updateCrimesQuery)
 
-        # 2) Şimdi crimes tablosunda pasif (status = '0') olan ve
-        # crime_check_times.print_status IS NULL ve süresi geçmiş olan kayıtları güncelle
-        # Yani: cct.print_status IS NULL  ve DATE(cct.end_time) < CURRENT_DATE()
-        # (İsteğe göre TIME kısmını dikkate almayıp yalnızca tarih karşılaştırması yapıyoruz.)
-        # Önce, sadece bu koşula uyan kayıtları alıp loglamak istersen:
-        # SELECT cct.* FROM crime_check_times cct
-        # INNER JOIN crimes c ON cct.crime_id = c.id
-        # WHERE c.status = '0'
-        #   AND cct.print_status IS NULL
-        #   AND DATE(cct.end_time) < CURRENT_DATE();
-
-        # Şimdi de bu kayıtları print_status = '5' yapalım.
-        # Bu update, 1. maddede pasife çektiğimiz (c.status = '0') olanları ve zamanı geçenleri seçiyoruz.
         updateQuery = """
         UPDATE crime_check_times cct
         INNER JOIN crimes c ON cct.crime_id = c.id
@@ -529,11 +545,8 @@ class PaksDatabase:
           AND cct.print_status IS NULL
           AND DATE(cct.end_time) < CURRENT_DATE()
         """
-
-        # Sorguyu çalıştır
         result, effectedRows = self.Execute(updateQuery)
 
-        # Etkilenen kayıt varsa loglara yazdırabiliriz (Opsiyonel)
         if effectedRows > 0:
             LOGGER.WriteLog(f"Toplam {effectedRows} adet pasif kayıt güncellendi.")
 
@@ -549,3 +562,29 @@ class PaksDatabase:
     def update_ntpserver(self, ip):
         query = f"UPDATE ntpserver SET ip='{ip}'"
         self.QueryList.append(query)
+
+    def updateAbsentPeopleBulk(self):
+        query = """
+            UPDATE crime_check_times cct
+            INNER JOIN crimes c ON cct.crime_id = c.id
+            SET cct.print_status = '0'
+            WHERE cct.print_status IS NULL
+              AND cct.deleted_at IS NULL
+              AND c.deleted_at IS NULL
+              AND c.status = '1'
+              AND DATE(cct.end_time) < CURRENT_DATE()
+        """
+        self.QueryList.append(query.strip())
+
+    def updatePassivePeopleBulk(self):
+        query = """
+            UPDATE crime_check_times cct
+            INNER JOIN crimes c ON cct.crime_id = c.id
+            SET cct.print_status = '5'
+            WHERE cct.print_status IS NULL
+              AND cct.deleted_at IS NULL
+              AND c.deleted_at IS NULL
+              AND c.status = '0'
+              AND DATE(cct.end_time) < CURRENT_DATE()
+        """
+        self.QueryList.append(query.strip())

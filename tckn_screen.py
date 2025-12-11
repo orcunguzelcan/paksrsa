@@ -2,37 +2,63 @@ import tkinter as tk
 import threading
 import time
 import os
-
 import cv2
 from PIL import Image, ImageTk
-
 import video_stream
 import fingerprint_config as fpconfig
 import sound_config
 from Logger import LOGGER
 
+# --- GLOBAL ÖNBELLEK ---
+# Animasyonu her seferinde diskten okumamak için RAM'de tutacağız
+animation_frames = []
+
+
+def load_animation_to_memory(path, target_w, target_h):
+    """
+    Videoyu kare kare okur, yeniden boyutlandırır ve RAM'e kaydeder.
+    VideoCapture hemen kapatılır, böylece ana kamera ile çakışmaz.
+    """
+    global animation_frames
+    if len(animation_frames) > 0:
+        return  # Zaten yüklü
+
+    temp_cap = cv2.VideoCapture(path)
+    if not temp_cap.isOpened():
+        LOGGER.WriteLog(f"Animasyon dosyası açılamadı: {path}")
+        return
+
+    LOGGER.WriteLog(f"Animasyon belleğe yükleniyor... {path}")
+
+    while True:
+        ret, frame = temp_cap.read()
+        if not ret:
+            break
+
+        # Renk dönüşümü ve boyutlandırma
+        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        frame = cv2.resize(frame, (target_w, target_h), interpolation=cv2.INTER_AREA)
+
+        animation_frames.append(frame)
+
+    temp_cap.release()  # <--- KRİTİK: Kaynağı hemen serbest bırak
+    LOGGER.WriteLog(f"Animasyon yüklendi. Toplam kare: {len(animation_frames)}")
+
 
 def start_scan_process(root_main):
-    """
-    Kamera ve Tarama Ekranı.
-    Timeout (Zaman Aşımı) desteği + yan tarafta animation.mp4 oynatma.
-    """
-
-    # --- DÜZELTME: Hata Kontrollü Çift Tıklama Koruması ---
+    # Çift tıklama koruması
     try:
         if getattr(video_stream, 'fingerprint_thread_active', False):
             LOGGER.WriteLog("Tarama zaten aktif, mükerrer tıklama engellendi.")
             return
     except Exception:
-        # Eğer değişken yoksa veya hata olursa devam et (kilitlenme olmasın)
         pass
-    # ---------------------------------------
 
     sound_config.play_sound(sound_config.soundNowFinger)
     video_stream.fingerprint_thread_active = True
 
     scan_window = tk.Toplevel()
-    scan_window.attributes("-fullscreen", True)  # TAM EKRAN AÇ
+    scan_window.attributes("-fullscreen", True)
     scan_window.title("Parmak İzi Tarama")
     scan_window.configure(bg="black")
 
@@ -41,27 +67,21 @@ def start_scan_process(root_main):
     scan_window.focus_force()
     scan_window.grab_set()
 
-    # --- ANA YAPI: Üstte kamera + animasyon, altta bilgi yazısı ---
-    # Üst kısım (ekranın büyük bölümü)
     main_frame = tk.Frame(scan_window, bg="black")
     main_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
-    # Sol tarafta canlı kamera
     left_frame = tk.Frame(main_frame, bg="black", width=512)
     left_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
-    # Sağ tarafta animation.mp4
     right_frame = tk.Frame(main_frame, bg="black", width=512)
     right_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
 
-    # Sabit boyutlu görüntü için sadece ortalanmış label
     video_label = tk.Label(left_frame, bg="black")
-    video_label.pack(side=tk.TOP, expand=True)  # fill=BOTH YOK
+    video_label.pack(side=tk.TOP, expand=True)
 
     animation_label = tk.Label(right_frame, bg="black")
-    animation_label.pack(side=tk.TOP, expand=True)  # fill=BOTH YOK
+    animation_label.pack(side=tk.TOP, expand=True)
 
-    # Alt kısım: bilgi yazısı (ekranın altında tek satır)
     info_label = tk.Label(
         scan_window,
         text="Parmak İzi Okutmak İçin Yeşil Işık Yanan Sensöre Dokunun",
@@ -76,8 +96,11 @@ def start_scan_process(root_main):
     scan_window.update()
     root_main.withdraw()
 
-    # --- ANİMASYON VİDEOSU AYARLARI ---
-    # Önce PAKS_PHOTO/animation.mp4, yoksa PAKS-PHOTO/animation.mp4 dene
+    # --- ANİMASYON HAZIRLIĞI ---
+    TARGET_W = 480
+    TARGET_H = 360
+
+    # Dosya yolu bulma
     animation_path = None
     candidates = [
         os.path.join("PAKS_PHOTO", "animation.mp4"),
@@ -88,84 +111,60 @@ def start_scan_process(root_main):
             animation_path = candidate
             break
 
-    anim_cap = None
-    if animation_path is not None:
-        try:
-            anim_cap = cv2.VideoCapture(animation_path)
-            if not anim_cap.isOpened():
-                LOGGER.WriteLog(f"animation.mp4 açılamadı: {animation_path}")
-                anim_cap = None
-            else:
-                LOGGER.WriteLog(f"animation.mp4 oynatılıyor: {animation_path}")
-        except Exception as e:
-            LOGGER.WriteLog(f"animation.mp4 açılırken hata: {e}")
-            anim_cap = None
-    else:
-        LOGGER.WriteLog("animation.mp4 bulunamadı (PAKS_PHOTO / PAKS-PHOTO).")
+    # Eğer animasyon varsa ve bellekte yoksa yükle
+    if animation_path:
+        # Thread içinde yükleyelim ki arayüz donmasın (video kısaysa main thread de olur)
+        threading.Thread(target=load_animation_to_memory, args=(animation_path, TARGET_W, TARGET_H),
+                         daemon=True).start()
 
-    # Sabit boyutlar (kamera ile uyumlu dursun diye aynı kullanıyoruz)
-    TARGET_W = 480
-    TARGET_H = 360
+    current_frame_index = 0
 
     def update_animation():
-        nonlocal anim_cap
-        # Tarama bitti ise veya pencere kapandıysa döngüyü durdur
+        nonlocal current_frame_index
+        global animation_frames
+
         if not getattr(video_stream, 'fingerprint_thread_active', False):
             return
         if not animation_label.winfo_exists():
             return
-        if anim_cap is None:
+
+        # Kareler henüz yüklenmediyse bekle
+        if len(animation_frames) == 0:
+            animation_label.after(100, update_animation)
             return
 
         try:
-            ret, frame = anim_cap.read()
-            if not ret:
-                # Video bitti, başa sar
-                anim_cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
-                ret, frame = anim_cap.read()
-                if not ret:
-                    return
+            # Döngüsel indeks
+            idx = current_frame_index % len(animation_frames)
+            frame_data = animation_frames[idx]
 
-            # BGR -> RGB
-            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-
-            # Sabit boyut
-            frame = cv2.resize(
-                frame,
-                (TARGET_W, TARGET_H),
-                interpolation=cv2.INTER_AREA
-            )
-
-            img_pil = Image.fromarray(frame)
+            img_pil = Image.fromarray(frame_data)
             imgtk = ImageTk.PhotoImage(image=img_pil)
+
             animation_label.configure(image=imgtk)
             animation_label.image = imgtk
 
+            current_frame_index += 1
+
         except Exception as e:
-            LOGGER.WriteLog(f"Animasyon frame güncelleme hatası: {e}")
+            LOGGER.WriteLog(f"Animasyon hatası: {e}")
             return
 
-        # ~30 FPS için 33 ms
+        # 30 FPS ~ 33ms
         if getattr(video_stream, 'fingerprint_thread_active', False) and animation_label.winfo_exists():
             animation_label.after(33, update_animation)
 
     # --- KAPATMA FONKSİYONU ---
     def on_close(event=None):
-        """Pencereyi kapatır ve ana ekrana döner."""
-        nonlocal anim_cap
-        LOGGER.WriteLog("Tarama ekranı kapatılıyor (Timeout veya Manuel).")
+        LOGGER.WriteLog("Tarama ekranı kapatılıyor.")
 
-        # Tarama bittiği için kilidi kaldırıyoruz
+        # 1. Thread durdurma işareti
         video_stream.fingerprint_thread_active = False
 
-        # Animasyon videosunu serbest bırak
-        try:
-            if anim_cap is not None:
-                anim_cap.release()
-                anim_cap = None
-        except Exception:
-            pass
+        # 2. Sensörü manuel iptal (Ek güvenlik)
+        fpconfig.cancel_scanning()
 
+        # 3. UI güncellemesini durdur
         video_stream.stop_ui_update()
 
         root_main.deiconify()
@@ -179,17 +178,18 @@ def start_scan_process(root_main):
             pass
 
     # --- DONANIMLARI BAŞLAT ---
+    # Kamera
     threading.Thread(target=video_stream.open_camera_in_label, args=(video_label,)).start()
 
-    # Animasyon döngüsünü başlat
-    if anim_cap is not None:
-        update_animation()
+    # Animasyon (RAM'den okuyacak)
+    update_animation()
 
-    # --- TIMEOUT DİNLEYİCİSİ ---
+    # Timeout Dinleyicisi
     video_label.bind("<<Timeout>>", on_close)
-    # ----------------------------------
 
     time.sleep(0.5)
+
+    # Parmak izi thread'i
     fp_thread = threading.Thread(target=fpconfig.find_finger_1_to_N, args=(scan_window, root_main))
     fp_thread.start()
 

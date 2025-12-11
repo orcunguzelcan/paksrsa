@@ -15,6 +15,7 @@ import threading
 from Logger import LOGGER
 import clr
 import sys
+import atexit  # --- EKLENDİ: Çıkış temizliği için ---
 
 # --- AYARLAR ---
 base_dir = os.path.dirname(os.path.abspath(__file__))
@@ -39,54 +40,84 @@ imagePath = str()
 dev = None
 
 
-def init_fingerprint_sensor():
+# --- YENİ EKLENEN: GÜVENLİ KAPATMA VE TEMİZLİK ---
+def release_device():
+    """
+    Cihazı güvenli bir şekilde kapatır ve kaynağı serbest bırakır.
+    Hem finally bloklarında hem de program çıkışında çağrılır.
+    """
+    global dev
     try:
+        if dev is not None:
+            # Işığı kapatmayı dene
+            try:
+                dev.SetLedStatus(0, LedStatus.Off)
+            except:
+                pass
+
+            # Cihazı kapat
+            if dev.IsOpen:
+                dev.Close()
+                LOGGER.WriteLog("Parmak izi sensörü donanım olarak serbest bırakıldı.")
+    except Exception as e:
+        LOGGER.WriteLog(f"Sensör kapatma hatası: {e}")
+    finally:
+        dev = None
+
+
+# Program aniden kapansa bile sensörü serbest bırakmayı dene
+atexit.register(release_device)
+
+
+# -----------------------------------------------------
+
+def init_fingerprint_sensor():
+    global dev
+    try:
+        # Eğer zaten açıksa tekrar açmaya çalışma, mevcut olanı döndür
+        if dev is not None and dev.IsOpen:
+            return dev
+
         TrustFingerManager.GlobalInitialize()
-        device = TrustFingerDevice()
-        device.Open(0)
-        return device
+        new_dev = TrustFingerDevice()
+        new_dev.Open(0)
+        LOGGER.WriteLog("Sensör başarıyla başlatıldı.")
+        return new_dev
     except Exception as e:
         LOGGER.WriteLog("Sensor Init Error: " + str(e))
+        # Hata durumunda nesneyi temizle
+        release_device()
         return None
 
 
-def set_led(dev, index: int, status: LedStatus):
-    """LED kontrolü (Hata alsa bile programı durdurmaz)"""
+def set_led(device, index: int, status: LedStatus):
     try:
-        if dev: dev.SetLedStatus(index, status)
+        if device and device.IsOpen:
+            device.SetLedStatus(index, status)
     except:
         pass
 
 
-def is_device_open(dev) -> bool:
+def is_device_open(device) -> bool:
     try:
-        return dev is not None and dev.IsOpen
+        return device is not None and device.IsOpen
     except:
         return False
 
 
-# --- YENİ FONKSİYON: DIŞARIDAN İPTAL ---
 def cancel_scanning():
-    """
-    Timeout veya pencere kapanması durumunda dışarıdan çağrılır.
-    Sensör ışığını ANINDA kapatır.
-    """
     global dev
-    video_stream.fingerprint_thread_active = False  # Bayrağı indir
+    video_stream.fingerprint_thread_active = False
     LOGGER.WriteLog("Tarama iptal edildi, LED kapatılıyor...")
-
-    # Thread'in işini bitirmesini beklemeden ışığı zorla kapat
-    # Lock kullanarak thread ile çakışmayı önle
     if dev:
         try:
-            # Thread o sırada sensörü kullanıyor olabilir, try-except önemli
             dev.SetLedStatus(0, LedStatus.Off)
         except:
             pass
 
 
-# --- SNAPSHOT FONKSİYONLARI ---
 def snapshot_effect(frame):
+    # ... (Orijinal kod aynı kalacak) ...
     whiteFrame = 255 * np.ones((480, 800, 3), np.uint8)
     try:
         cv2.namedWindow("window", cv2.WINDOW_NORMAL)
@@ -102,6 +133,7 @@ def snapshot_effect(frame):
 
 
 def take_snapshot(uID, frame):
+    # ... (Orijinal kod aynı kalacak) ...
     global imagePath
     timeStamp = datetime.datetime.now()
     cameraPath = os.path.join('Photos', str(uID), str(timeStamp.year), str(timeStamp.month), str(timeStamp.day))
@@ -127,259 +159,141 @@ def take_snapshot(uID, frame):
         LOGGER.WriteLog("Snapshot Error: " + str(e))
 
 
-# --- TARAMA FONKSİYONU ---
 def find_finger_1_to_N(scan_window, root_main):
     global finger, imagePath, read_finger_per_crime_check_time, dev
 
-    retry_count = 0
-    while (dev is None or not is_device_open(dev)):
-        if not video_stream.fingerprint_thread_active: return
-        dev = init_fingerprint_sensor()
-        if dev is None:
-            time.sleep(1)
-            retry_count += 1
-            if retry_count > 5: time.sleep(2)
+    # --- TRY BLOK BAŞLANGICI: Sensörün kilitli kalmaması için ---
+    try:
+        retry_count = 0
+        while (dev is None or not is_device_open(dev)):
+            if not video_stream.fingerprint_thread_active: return
+            dev = init_fingerprint_sensor()
+            if dev is None:
+                time.sleep(1)
+                retry_count += 1
+                if retry_count > 5: time.sleep(2)
 
-    LOGGER.WriteLog("1:N Tarama Modu Başladı.")
+        LOGGER.WriteLog("1:N Tarama Modu Başladı.")
 
-    while video_stream.fingerprint_thread_active:
-        fingerResult = None
+        while video_stream.fingerprint_thread_active:
+            fingerResult = None
 
-        # --- BLOK 1: SENSÖR OKUMA ---
-        with fingerprint_check_lock:
-            try:
-                # İptal edildiyse hemen çık
-                if not video_stream.fingerprint_thread_active:
+            with fingerprint_check_lock:
+                try:
+                    if not video_stream.fingerprint_thread_active:
+                        set_led(dev, 0, LedStatus.Off)
+                        break  # break kullanarak finally bloğuna git
+
+                    set_led(dev, 0, LedStatus.On)
+                    bmp_data = dev.CaptureBitmapData(20)
+
+                    if not video_stream.fingerprint_thread_active:
+                        set_led(dev, 0, LedStatus.Off)
+                        break
+
+                    if bmp_data is None or bmp_data.FingerprintImageData is None:
+                        continue
+
+                    fingerResult = dev.ExtractFeature(FingerPosition.UnKnow)
+                except Exception:
+                    pass
+                finally:
+                    # Döngü içinde LED'i kapat (bir sonraki turda tekrar açılacak)
                     set_led(dev, 0, LedStatus.Off)
-                    return
 
-                set_led(dev, 0, LedStatus.On)
+            if not video_stream.fingerprint_thread_active:
+                break
 
-                # Bu işlem bloklayabilir (bekletebilir)
-                bmp_data = dev.CaptureBitmapData(20)
+            # --- Okuma Başarısız ---
+            if fingerResult is None or fingerResult.FeatureData is None:
+                if video_stream.fingerprint_thread_active:
+                    LOGGER.WriteLog("Okuma başarısız.")
+                    sound_config.play_sound(sound_config.soundError)
+                    video_stream.fingerprint_thread_active = False
+                    try:
+                        scan_window.destroy()
+                        root_main.deiconify()
+                    except:
+                        pass
+                break  # Döngüden çık
 
-                # UYANDIKTAN SONRA KONTROL: Eğer o sırada iptal edildiyse çık
-                if not video_stream.fingerprint_thread_active:
-                    set_led(dev, 0, LedStatus.Off)
-                    return
+            # --- Veritabanı Kontrolü (Orijinal Mantık) ---
+            live_template = fingerResult.FeatureData
+            all_fingerprints = database.selectFingerPrintsTable()
 
-                if bmp_data is None or bmp_data.FingerprintImageData is None:
+            matched_person_id = None
+            matched_tckn = None
+            isFingerFound = False
+
+            for i, row in enumerate(all_fingerprints):
+                if not video_stream.fingerprint_thread_active: break
+                db_template_hex = row[1]
+                if db_template_hex is None: continue
+                try:
+                    tempInfo = db_template_hex.replace("'", "").strip()
+                    tempInfoBytes = System.Array[System.Byte](list(binascii.unhexlify(tempInfo)))
+                    result = dev.Verify(3, live_template, tempInfoBytes)
+                    if result.get_IsMatch():
+                        finger_id = row[0]
+                        matched_person_id = database.selectPersonId(finger_id)
+                        matched_tckn = database.selectTCNo(matched_person_id)
+                        isFingerFound = True
+                        break
+                except:
                     continue
 
-                fingerResult = dev.ExtractFeature(FingerPosition.UnKnow)
-            except Exception:
-                pass
-            finally:
-                # Her döngü sonunda LED'i kapat (Bir sonraki turda tekrar yakacak)
-                # Bu, ışığın takılı kalmasını önler
-                set_led(dev, 0, LedStatus.Off)
+            if not video_stream.fingerprint_thread_active: break
 
-        # --- KRİTİK KONTROL ---
-        # Eğer yukarıdaki işlemler sırasında timeout olduysa
-        # aşağıya inip "Hata Sesi" çalma, sessizce çık.
-        if not video_stream.fingerprint_thread_active:
-            return
+            if isFingerFound:
+                # ... (Orijinal İşlemler: Blacklist, Suç Kaydı vs.) ...
+                if len(database.selectBlacklistPersonResult(matched_person_id)) > 0:
+                    database.insertBlacklist(matched_person_id)
+                    sound_config.play_sound(sound_config.soundAlarm)
 
-        # --- BLOK 2: SONUÇ ANALİZİ ---
-        if fingerResult is None or fingerResult.FeatureData is None:
-            # Parmak okunamadıysa hata verip başa dön (User İsteği)
-            # Ancak process hala aktifse yap bunu
-            if video_stream.fingerprint_thread_active:
-                LOGGER.WriteLog("Okuma başarısız.")
-                sound_config.play_sound(sound_config.soundError)
+                crimes = database.selectPersonCrimesTable(matched_person_id)
+                imza_atildi = False
 
-                # Hata durumunda ana ekrana dön
+                if len(crimes) > 0:
+                    for c in crimes:
+                        check_times = database.selectIdFromPersonCrimeCheckTimesTable(c[0])
+                        if len(check_times) > 0:
+                            take_snapshot(matched_tckn, video_stream.frame)
+                            database.updateCrimeCheckTimes(
+                                printStatus='1',
+                                imagePath=imagePath,
+                                crimeResult=c[0],
+                                crime_check_time_id=check_times[0][0]
+                            )
+                            imza_atildi = True
+                            if read_finger_per_crime_check_time: break
+
+                if imza_atildi:
+                    sound_config.play_sound(sound_config.soundSuccess)
+                else:
+                    sound_config.play_sound(sound_config.soundNextHour)
+
+                time.sleep(1.5)
                 video_stream.fingerprint_thread_active = False
                 try:
                     scan_window.destroy()
                     root_main.deiconify()
                 except:
                     pass
-                return
+                break  # Döngüden çık
+
             else:
-                return  # Sessizce çık
+                LOGGER.WriteLog("Eşleşme yok.")
+                sound_config.play_sound(sound_config.soundUndefined)
+                time.sleep(2)
+                video_stream.fingerprint_thread_active = False
+                try:
+                    scan_window.destroy()
+                    root_main.deiconify()
+                except:
+                    pass
+                break  # Döngüden çık
 
-        # --- BLOK 3: VERİTABANI SORGUSU ---
-        live_template = fingerResult.FeatureData
-        all_fingerprints = database.selectFingerPrintsTable()
-
-        matched_person_id = None
-        matched_tckn = None
-        isFingerFound = False
-
-        for i, row in enumerate(all_fingerprints):
-            if not video_stream.fingerprint_thread_active: return
-
-            db_template_hex = row[1]
-            if db_template_hex is None: continue
-            try:
-                tempInfo = db_template_hex.replace("'", "").strip()
-                tempInfoBytes = System.Array[System.Byte](list(binascii.unhexlify(tempInfo)))
-                result = dev.Verify(3, live_template, tempInfoBytes)
-                if result.get_IsMatch():
-                    finger_id = row[0]
-                    matched_person_id = database.selectPersonId(finger_id)
-                    matched_tckn = database.selectTCNo(matched_person_id)
-                    isFingerFound = True
-                    break
-            except:
-                continue
-
-        if not video_stream.fingerprint_thread_active: return
-
-        # --- BLOK 4: SONUÇ BİLDİRİMİ ---
-        if isFingerFound:
-            if len(database.selectBlacklistPersonResult(matched_person_id)) > 0:
-                database.insertBlacklist(matched_person_id)
-                sound_config.play_sound(sound_config.soundAlarm)
-
-            crimes = database.selectPersonCrimesTable(matched_person_id)
-            imza_atildi = False
-
-            if len(crimes) > 0:
-                for c in crimes:
-                    check_times = database.selectIdFromPersonCrimeCheckTimesTable(c[0])
-                    if len(check_times) > 0:
-                        take_snapshot(matched_tckn, video_stream.frame)
-                        database.updateCrimeCheckTimes(
-                            printStatus='1',
-                            imagePath=imagePath,
-                            crimeResult=c[0],
-                            crime_check_time_id=check_times[0][0]
-                        )
-                        imza_atildi = True
-                        if read_finger_per_crime_check_time: break
-
-            if imza_atildi:
-                sound_config.play_sound(sound_config.soundSuccess)
-            else:
-                sound_config.play_sound(sound_config.soundNextHour)
-
-            time.sleep(1.5)
-            video_stream.fingerprint_thread_active = False
-            try:
-                scan_window.destroy()
-                root_main.deiconify()
-            except:
-                pass
-            return
-
-        else:
-            LOGGER.WriteLog("Eşleşme yok.")
-            sound_config.play_sound(sound_config.soundUndefined)
-            time.sleep(2)
-
-            video_stream.fingerprint_thread_active = False
-            try:
-                scan_window.destroy()
-                root_main.deiconify()
-            except:
-                pass
-            return
-            
-def find_finger(fingerprint_list, person_id_info, person_tckn_info):
-    global finger,imagePath,read_finger_per_crime_check_time,dev
-    fingerResult=None    
-    
-    while (dev is None or not is_device_open(dev)):        
-        dev = init_fingerprint_sensor()
-        
-    while video_stream.fingerprint_thread_active:
-        print("fp_thread_active")
-        with fingerprint_check_lock:
-            try:
-                print("before set_led")
-                set_led(dev,0,LedStatus.On)
-                print("after set_led")
-                bmp_data = dev.CaptureBitmapData(20)
-                while video_stream.fingerprint_thread_active and (bmp_data is None or bmp_data.FingerprintImageData is None):
-                    bmp_data = dev.CaptureBitmapData(20)
-                    if not video_stream.fingerprint_thread_active:
-                        return
-                    continue
-                fingerResult = dev.ExtractFeature(FingerPosition.UnKnow)                
-            except TrustFingerException as e:
-                LOGGER.WriteLog("Fingerprint Scan Error")
-                sound_config.play_sound(sound_config.soundError)
-                if e.HResult == -221:
-                    print("Henüz parmak yok, bekleniyor...")
-                else:
-                    print(f"Hata oluştu: {e}")
-                pass
-            finally:
-                set_led(dev, 0,LedStatus.Off)
-                
-            if fingerResult is None or fingerResult.FeatureData is None:
-                continue
-                
-            live_template = fingerResult.FeatureData            
-                
-            last_success_fingerprint_time = datetime.datetime.now()
-            isEffectedAnyRow=False
-            isFingerFound=False
-            video_stream.first_call_begin = datetime.datetime.now()
-            for i in range(len(fingerprint_list)):
-                tempInfo = fingerprint_list[i][1].replace("'", "")
-                tempInfo = System.Array[System.Byte](list(binascii.unhexlify(tempInfo)))
-                result = dev.Verify(3, live_template, tempInfo)  
-                if result.get_IsMatch():
-                    blacklistPersonResult = database.selectBlacklistPersonResult(person_id_info)
-                    isFingerFound=True
-                    
-                    if len(blacklistPersonResult) > 0:
-                        database.insertBlacklist(person_id_info)
-                        sound_config.play_sound(sound_config.soundAlarm)
-                    
-            crime_result = database.selectPersonCrimesTable(person_id_info)
-            
-            if isFingerFound and len(crime_result) > 0:
-                # SADECE ŞU ANIN SAAT ARALIĞINA DÜŞEN SLOT'LAR İÇİN İŞLEM YAP
-                for j in range(len(crime_result)):
-                    crime_check_time_result_id = database.selectIdFromPersonCrimeCheckTimesTable(crime_result[j][0])
-                    
-                    if len(crime_check_time_result_id) > 0:
-                        take_snapshot(person_tckn_info, video_stream.frame)
-                        effectedRows=database.updateCrimeCheckTimes(
-                            printStatus='1',
-                            imagePath=imagePath,
-                            crimeResult=crime_result[j][0],
-                            crime_check_time_id=crime_check_time_result_id[0][0]
-                        )
-                        if effectedRows>0:
-                            isEffectedAnyRow = True
-                            time.sleep(0.5)
-                            if read_finger_per_crime_check_time:
-                                break
-                            
-                # GÜNCELLENEN BLOK
-                if isEffectedAnyRow:
-                    sound_config.play_sound(sound_config.soundSuccess)
-                    video_stream.fingerprint_thread_active = False
-                    return
-                else:
-                    # O an için uygun slot yoksa: kontrol et, o güne ait ama henüz saati gelmemiş dosya var mı?
-                    now = datetime.datetime.now().time()
-                    has_future_slot = False
-                    for c in crime_result:
-                        try:
-                            start_time = c[2].time() if isinstance(c[2], datetime.datetime) else datetime.datetime.strptime(str(c[2]), "%H:%M:%S").time()
-                            if start_time > now:
-                                has_future_slot = True
-                                break
-                        except Exception:
-                            continue
-
-                    if has_future_slot:
-                        # Henüz zamanı gelmemiş başka dosya var → sonraki saat sesi
-                        sound_config.play_sound(sound_config.soundNextHour)
-                    else:
-                        # O güne ait başka dosya yok → ertesi gün sesi
-                        sound_config.play_sound(sound_config.soundNextday)
-
-                    video_stream.fingerprint_thread_active=False
-                    return                    
-                    
-                    
-            if not isFingerFound or not isEffectedAnyRow:
-                sound_config.play_sound(sound_config.soundError)
-            time.sleep(2)
+    finally:
+        # --- KRİTİK: Ne olursa olsun çıkışta sensörü kapat ---
+        LOGGER.WriteLog("Tarama döngüsü bitti, sensör kapatılıyor...")
+        release_device()
